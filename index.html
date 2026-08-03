@@ -195,13 +195,16 @@
     <div id="acctOut">
       <h2>Hisobga kirish</h2>
       <p class="modal-sub">Progress barcha qurilmalarda birlashadi — kompyuterda boshlab, telefonda davom etasiz. Internetsiz ham ishlaydi, ulanish tiklanganda o'zi sinxronlanadi.</p>
-      <label class="fld"><span>Email</span><input id="acctEmail" type="email" autocomplete="email" placeholder="siz@example.com"></label>
+      <p class="modal-warn" id="acctWarn" hidden></p>
+      <label class="fld"><span>Ism</span><input id="acctEmail" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="masalan: muhammad"></label>
       <label class="fld"><span>Parol</span><input id="acctPw" type="password" autocomplete="current-password" placeholder="kamida 6 belgi"></label>
+      <p class="modal-hint" id="acctHint" hidden></p>
       <p class="modal-err" id="acctErr" hidden></p>
       <div class="modal-actions">
         <button class="ghost-btn" id="acctSignUp">Ro'yxatdan o'tish</button>
         <button class="primary-btn" id="acctSignIn">Kirish</button>
       </div>
+      <p class="modal-foot">Ism — bu shunchaki login. Ikkala qurilmada <b>bir xil ism va parol</b> kiriting, progress o'zi birlashadi.</p>
     </div>
 
     <div id="acctIn" hidden>

@@ -10,6 +10,43 @@ window.Sync = (function () {
   var URL_ = (window.SUPABASE_URL || '').replace(/\/+$/, '');
   var ANON = window.SUPABASE_ANON_KEY || '';
 
+  // Supabase Auth ichkarida email talab qiladi, lekin foydalanuvchi
+  // faqat ISM yozadi. Ism shu domenga ulanadi. «.invalid» — RFC 6761
+  // bo'yicha kafolatlangan mavjud bo'lmagan domen: bu manzilga hech qachon
+  // haqiqiy xat ketmaydi, shuning uchun begona odamga tushib qolmaydi.
+  var LOGIN_DOMAIN = 'attestatsiya.invalid';
+
+  var TRANSLIT = {
+    а:'a',б:'b',в:'v',г:'g',ғ:'g',д:'d',е:'e',ё:'yo',ж:'j',з:'z',и:'i',й:'y',
+    к:'k',қ:'q',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ў:'o',
+    ф:'f',х:'x',ҳ:'h',ц:'ts',ч:'ch',ш:'sh',щ:'sh',ъ:'',ы:'i',ь:'',э:'e',ю:'yu',я:'ya'
+  };
+
+  // «Muhammad Rayimov» -> «muhammad.rayimov»
+  function slug(s) {
+    var t = String(s || '').trim().toLowerCase();
+    t = t.replace(/[Ѐ-ӿ]/g, function (c) { return TRANSLIT[c] !== undefined ? TRANSLIT[c] : c; });
+    t = t.replace(/[ʻʼ'’`]/g, '');
+    t = t.replace(/[\s_]+/g, '.');
+    t = t.replace(/[^a-z0-9.\-]/g, '');
+    t = t.replace(/\.{2,}/g, '.').replace(/^[.\-]+|[.\-]+$/g, '');
+    return t;
+  }
+
+  // Ism -> ichki email. Foydalanuvchi haqiqiy email yozsa — o'zgarishsiz qoladi.
+  function toEmail(login) {
+    var v = String(login || '').trim();
+    if (v.indexOf('@') > 0) return v.toLowerCase();
+    var s = slug(v);
+    return s ? s + '@' + LOGIN_DOMAIN : '';
+  }
+
+  // Ichki emaildan ko'rsatiladigan ismni ajratish
+  function toLogin(email) {
+    var v = String(email || '');
+    return v.indexOf('@' + LOGIN_DOMAIN) > 0 ? v.split('@')[0] : v;
+  }
+
   var bound = null;           // {get, set}
   var listeners = [];
   var state = { on: false, status: 'off', email: '', at: 0, msg: '' };
@@ -61,11 +98,11 @@ window.Sync = (function () {
     var m = (e && e.message) || '';
     if (/Failed to fetch|NetworkError|load failed|ERR_/i.test(m) || !navigator.onLine)
       return new Error('Internet yo\'q yoki server javob bermayapti. Keyinroq urinib ko\'ring — progress shu qurilmada saqlanib turadi.');
-    if (/Invalid login credentials/i.test(m)) return new Error('Email yoki parol noto\'g\'ri.');
-    if (/already registered|already been registered/i.test(m)) return new Error('Bu email allaqachon ro\'yxatdan o\'tgan — «Kirish» tugmasini bosing.');
-    if (/Email not confirmed/i.test(m)) return new Error('Email hali tasdiqlanmagan — pochtangizdagi havolani bosing.');
+    if (/Invalid login credentials/i.test(m)) return new Error('Ism yoki parol noto\'g\'ri. Ilk marta bo\'lsa — «Ro\'yxatdan o\'tish».');
+    if (/already registered|already been registered/i.test(m)) return new Error('Bu ism allaqachon band — «Kirish» tugmasini bosing.');
+    if (/Email not confirmed/i.test(m)) return new Error('Hisob tasdiqlanmagan. Supabase panelida Authentication → Email → «Confirm email» ni o\'chiring, keyin qayta urinib ko\'ring.');
     if (/Password should be at least/i.test(m)) return new Error('Parol kamida 6 belgidan iborat bo\'lsin.');
-    if (/valid email|Unable to validate email/i.test(m)) return new Error('Email manzili noto\'g\'ri yozilgan.');
+    if (/valid email|Unable to validate email/i.test(m)) return new Error('Ismda faqat harf, raqam, nuqta va chiziqcha ishlatiladi.');
     if (/rate limit|too many/i.test(m)) return new Error('Juda ko\'p urinish. Bir necha daqiqadan keyin qayta urinib ko\'ring.');
     if (/relation .* does not exist|schema cache/i.test(m)) return new Error('Bazada «progress» jadvali topilmadi — SQL skriptini ishga tushirish kerak.');
     return e;
@@ -105,17 +142,20 @@ window.Sync = (function () {
       exp: Date.now() + (r.expires_in || 3600) * 1000
     };
     setAuth(a);
-    emit({ on: true, email: a.email });
+    emit({ on: true, email: toLogin(a.email) });
     return a;
   }
 
   /* -------------------- auth -------------------- */
-  function signUp(email, password) {
+  function signUp(login, password) {
     if (!configured()) return Promise.reject(new Error('Sinxronizatsiya sozlanmagan'));
+    var email = toEmail(login);
+    if (!email) return Promise.reject(new Error('Ism kiriting (harf va raqamlardan).'));
     return req('/auth/v1/signup', { method: 'POST', body: { email: email, password: password } })
       .then(function (r) {
         if (!r || !r.access_token) {
-          throw new Error('Hisob yaratildi. Emaildagi tasdiqlash havolasini bosing, keyin «Kirish».');
+          // «Confirm email» yoqilgan — soxta domenga xat bora olmaydi
+          throw new Error('Supabase panelida Authentication → Email → «Confirm email» yoqilgan. Uni o\'chiring, keyin qayta urinib ko\'ring.');
         }
         store(r);
         return syncNow();
@@ -123,11 +163,23 @@ window.Sync = (function () {
       .catch(function (e) { throw friendly(e); });
   }
 
-  function signIn(email, password) {
+  function signIn(login, password) {
     if (!configured()) return Promise.reject(new Error('Sinxronizatsiya sozlanmagan'));
+    var email = toEmail(login);
+    if (!email) return Promise.reject(new Error('Ism kiriting (harf va raqamlardan).'));
     return req('/auth/v1/token?grant_type=password', { method: 'POST', body: { email: email, password: password } })
       .then(function (r) { store(r); return syncNow(); })
       .catch(function (e) { throw friendly(e); });
+  }
+
+  // «Confirm email» holati — soxta domen bilan u YOQILGAN bo'lsa ro'yxatdan o'tib bo'lmaydi
+  var settingsCache = null;
+  function settings() {
+    if (!configured()) return Promise.resolve(null);
+    if (settingsCache) return Promise.resolve(settingsCache);
+    return req('/auth/v1/settings')
+      .then(function (r) { settingsCache = r; return r; })
+      .catch(function () { return null; });
   }
 
   function signOut() {
@@ -251,7 +303,7 @@ window.Sync = (function () {
     bound = io;
     if (!configured()) { emit({ on: false, status: 'off' }); return; }
     var a = auth();
-    if (a) { emit({ on: true, email: a.email, status: 'idle' }); syncNow(); }
+    if (a) { emit({ on: true, email: toLogin(a.email), status: 'idle' }); syncNow(); }
     else emit({ on: false, status: 'out' });
 
     window.addEventListener('online', function () { if (auth()) syncNow(); });
@@ -264,6 +316,7 @@ window.Sync = (function () {
     configured: configured,
     bind: bind, on: on, state: function () { return state; },
     signIn: signIn, signUp: signUp, signOut: signOut,
-    syncNow: syncNow, schedule: schedule, merge: merge
+    syncNow: syncNow, schedule: schedule, merge: merge,
+    settings: settings, slug: slug, toEmail: toEmail, toLogin: toLogin
   };
 })();

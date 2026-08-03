@@ -63,7 +63,8 @@ alohida hisoblanadi. Qo'lda o'tkazish: bosh sahifadagi
 
 **Qurilmalar orasida avtomatik sinxron** uchun — [SUPABASE.md](SUPABASE.md)
 (bepul, ~5 daqiqa sozlash). Yoqilgach yuqorida **☁** tugmasi paydo bo'ladi:
-email/parol bilan kirasiz, progress har sessiyadan keyin o'zi birlashadi.
+**ism va parol** bilan kirasiz (email so'ralmaydi), progress har sessiyadan
+keyin o'zi birlashadi.
 Ilova **local-first** — internetsiz ham to'xtamaydi, ulanish tiklanganda
 sinxronlanadi.
 

@@ -52,12 +52,15 @@ create policy "progress_update_own" on public.progress
 
 ---
 
-## 3. Email tasdiqlashni o'chirish (tavsiya)
+## 3. Email tasdiqlashni o'chirish ⚠️ MAJBURIY
 
 **Authentication → Sign In / Providers → Email** → **Confirm email** ni **o'chiring** → Save.
 
-Aks holda ro'yxatdan o'tgandan keyin pochtadagi havolani bosish kerak bo'ladi —
-yo'lda bu qulay emas. (Xohlasangiz keyin qayta yoqasiz.)
+Ilova email o'rniga **ism** so'raydi (pastga qarang), ism esa ichkarida mavjud
+bo'lmagan domenga ulanadi — u yerga tasdiqlash xati bora olmaydi. Shuning uchun
+«Confirm email» yoqiq qolsa **ro'yxatdan o'tib bo'lmaydi**.
+
+Ilova buni o'zi sezadi: kirish oynasida sariq ogohlantirish chiqadi.
 
 ---
 
@@ -95,9 +98,31 @@ Agar tasodifan chiqib ketsa — **Project Settings → API → Reset** qiling.
 
 ## Ishlatish
 
-1. Kompyuterda **☁** → email + parol → **Ro'yxatdan o'tish**
-2. Telefonda saytni oching → **☁** → o'sha email/parol → **Kirish**
+1. Kompyuterda **☁** → **ism** + parol → **Ro'yxatdan o'tish**
+2. Telefonda saytni oching → **☁** → **o'sha ism va parol** → **Kirish**
 3. Progress birlashadi. Har sessiyadan keyin avtomatik sinxronlanadi.
+
+### Ism qanday ishlaydi
+
+Email so'ralmaydi — faqat ism. Ilova uni ichkarida loginga aylantiradi:
+
+| Yozasiz | Login bo'ladi |
+|---|---|
+| `Muhammad` | `muhammad` |
+| `Muhammad Rayimov` | `muhammad.rayimov` |
+| `Раҳимов Ўткир` | `rahimov.otkir` (kirill lotinga o'giriladi) |
+| `Gʻulom` | `gulom` |
+
+Kiritish paytida login qanday ko'rinishi maydon ostida ko'rsatiladi — ikkinchi
+qurilmada aynan shu ismni yozsangiz kifoya.
+
+Texnik jihatdan Supabase Auth baribir email talab qiladi, shuning uchun login
+ichkarida `ism@attestatsiya.invalid` ko'rinishida saqlanadi. `.invalid` — RFC 6761
+bo'yicha kafolatlangan **mavjud bo'lmagan** domen: bu manzilga hech qachon
+haqiqiy xat ketmaydi va begona odamga tushmaydi.
+
+Xohlasangiz haqiqiy email ham yozishingiz mumkin (`@` bo'lsa o'zgarishsiz
+ishlatiladi) — parolni tiklash faqat shunda ishlaydi.
 
 **Birlashtirish qoidasi:** har savol bo'yicha *oxirgi javob berilgan* qurilmaning
 holati ustun turadi; ko'rilgan/to'g'ri/xato hisoblari maksimum bo'yicha olinadi.
@@ -111,6 +136,7 @@ Shuning uchun ikkala qurilmada ishlasangiz ham hech narsa yo'qolmaydi.
   bir tugma bilan qayta yoqiladi; ilova bu vaqtda ham lokal ishlayveradi.
 - Sinxronizatsiya **ixtiyoriy**. `config.js` bo'sh bo'lsa ilova avvalgidek
   faqat shu qurilmada ishlaydi va **☁** tugmasi umuman ko'rinmaydi.
-- Parolni unutsangiz: Supabase panelida **Authentication → Users** dan
-  foydalanuvchini o'chirib, qaytadan ro'yxatdan o'tish eng oson yo'l
-  (progress lokal nusxada saqlanib turadi).
+- **Parolni unutsangiz:** ism bilan kirganda parolni tiklash imkoni yo'q
+  (haqiqiy pochta yo'q). Supabase panelida **Authentication → Users** dan
+  foydalanuvchini o'chirib, qaytadan ro'yxatdan o'ting — progress lokal
+  nusxada saqlanib turadi va qayta kirganda bulutga chiqadi.

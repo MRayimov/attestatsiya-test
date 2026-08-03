@@ -689,6 +689,25 @@
   $('#btnAccount').addEventListener('click', function () {
     $('#acctErr').hidden = true;
     $('#acctModal').hidden = false;
+    // «Confirm email» yoqilgan bo'lsa ism bilan ro'yxatdan o'tib bo'lmaydi — oldindan ogohlantiramiz
+    Sync.settings().then(function (s) {
+      var bad = s && s.mailer_autoconfirm === false;
+      $('#acctWarn').hidden = !bad;
+      if (bad) {
+        $('#acctWarn').textContent = '⚠ Supabase panelida Authentication → Email → «Confirm email» yoqilgan. '
+          + 'Ism bilan ro\'yxatdan o\'tish uchun uni o\'chirish kerak.';
+      }
+    });
+  });
+
+  // ism -> qanday ko'rinishda saqlanishini jonli ko'rsatish
+  $('#acctEmail').addEventListener('input', function (e) {
+    var v = e.target.value.trim();
+    var h = $('#acctHint');
+    if (!v || v.indexOf('@') > 0) { h.hidden = true; return; }
+    var s = Sync.slug(v);
+    h.hidden = !s || s === v.toLowerCase();
+    if (!h.hidden) h.innerHTML = 'Login: <code>' + esc(s) + '</code>';
   });
   $('#acctClose').addEventListener('click', function () { $('#acctModal').hidden = true; });
   $('#acctModal').addEventListener('click', function (e) {
@@ -696,13 +715,17 @@
   });
 
   function doAuth(fn) {
-    var email = $('#acctEmail').value.trim();
+    var login = $('#acctEmail').value.trim();
     var pw = $('#acctPw').value;
-    if (!email || pw.length < 6) { acctBusy(false, 'Email va kamida 6 belgili parol kiriting.'); return; }
+    if (login.indexOf('@') < 0 && Sync.slug(login).length < 2) {
+      acctBusy(false, 'Ism kamida 2 ta harf yoki raqamdan iborat bo\'lsin.'); return;
+    }
+    if (pw.length < 6) { acctBusy(false, 'Parol kamida 6 belgidan iborat bo\'lsin.'); return; }
     acctBusy(true, '');
-    fn(email, pw).then(function () {
+    fn(login, pw).then(function () {
       acctBusy(false, '');
       $('#acctPw').value = '';
+      $('#acctHint').hidden = true;
       $('#acctModal').hidden = true;
       toast('Sinxronizatsiya yoqildi');
       renderHome();
