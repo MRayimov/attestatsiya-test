@@ -1,6 +1,6 @@
-/* Oflayn ishlash uchun oddiy cache — yo'lda internetsiz test yechish mumkin.
+/* Oflayn ishlash uchun kesh — yo'lda internetsiz test yechish mumkin.
    Faqat SHU sayt fayllari keshlanadi; Supabase so'rovlari keshlanmaydi. */
-var CACHE = 'attest-v2';
+var CACHE = 'attest-v3';
 var ASSETS = [
   './',
   'index.html',
@@ -14,42 +14,79 @@ var ASSETS = [
   'manifest.webmanifest'
 ];
 
+// Bittasi yiqilsa butun addAll yiqilmasin — har birini alohida qo'yamiz
+function precache() {
+  return caches.open(CACHE).then(function (c) {
+    return Promise.all(ASSETS.map(function (a) {
+      return fetch(a, { cache: 'reload' })
+        .then(function (r) { return r && r.ok ? c.put(a, r) : null; })
+        .catch(function () { return null; });
+    }));
+  });
+}
+
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
+  e.waitUntil(precache().then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(
-    caches.keys().then(function (ks) {
-      return Promise.all(ks.map(function (k) { return k === CACHE ? null : caches.delete(k); }));
-    }).then(function () { return self.clients.claim(); })
+    caches.keys()
+      .then(function (ks) {
+        return Promise.all(ks.map(function (k) { return k === CACHE ? null : caches.delete(k); }));
+      })
+      // O'z-o'zini tiklash: kesh brauzer tomonidan tozalangan bo'lsa qayta to'ldiriladi
+      .then(precache)
+      .then(function () { return self.clients.claim(); })
   );
 });
 
 self.addEventListener('fetch', function (e) {
-  if (e.request.method !== 'GET') return;
+  var req = e.request;
+  if (req.method !== 'GET') return;
+
+  var url;
+  try { url = new URL(req.url); } catch (x) { return; }
 
   // Boshqa domenlar (Supabase API) — keshsiz, to'g'ridan-to'g'ri tarmoqqa
-  var url;
-  try { url = new URL(e.request.url); } catch (x) { return; }
   if (url.origin !== self.location.origin) return;
 
+  // Sahifaga kirish: avval tarmoq, ilinmasa keshdagi index.html.
+  // Nusxa DOIM «index.html» kaliti ostida saqlanadi — shunda «?v=123» kabi
+  // so'rov qatorlari alohida yozuv yaratmaydi va oflayn kirish ishlayveradi.
+  if (req.mode === 'navigate') {
+    e.respondWith(
+      fetch(req).then(function (r) {
+        if (r && r.ok) {
+          var cp = r.clone();
+          caches.open(CACHE).then(function (c) { c.put('index.html', cp); });
+        }
+        return r;
+      }).catch(function () {
+        return caches.match('index.html').then(function (hit) {
+          return hit || caches.match('./');
+        });
+      })
+    );
+    return;
+  }
+
+  // Qolgan fayllar: keshdan tez beriladi, fonda yangilanadi
   e.respondWith(
-    caches.match(e.request).then(function (hit) {
+    caches.match(req).then(function (hit) {
       if (hit) {
-        // fon rejimida yangilab qo'yamiz (stale-while-revalidate)
-        fetch(e.request).then(function (r) {
-          if (r && r.ok) caches.open(CACHE).then(function (c) { c.put(e.request, r.clone()); });
+        fetch(req).then(function (r) {
+          if (r && r.ok) caches.open(CACHE).then(function (c) { c.put(req, r.clone()); });
         }).catch(function () {});
         return hit;
       }
-      return fetch(e.request).then(function (r) {
+      return fetch(req).then(function (r) {
         if (r && r.ok) {
           var cp = r.clone();
-          caches.open(CACHE).then(function (c) { c.put(e.request, cp); });
+          caches.open(CACHE).then(function (c) { c.put(req, cp); });
         }
         return r;
-      }).catch(function () { return caches.match('index.html'); });
+      });
     })
   );
 });
