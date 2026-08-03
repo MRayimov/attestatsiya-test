@@ -481,6 +481,7 @@
       S.sessions.push({ ts: Date.now(), mode: Q.mode, total: done.length, correct: cor, secs: secs });
       if (S.sessions.length > 200) S.sessions = S.sessions.slice(-200);
       save();
+      if (window.Sync) Sync.schedule();
     }
 
     var p = pct(cor, done.length);
@@ -642,12 +643,90 @@
     }
   });
 
+  /* -------------------- hisob / sinxronizatsiya -------------------- */
+  function initSync() {
+    if (!window.Sync || !Sync.configured()) return;   // config.js bo'sh -> faqat lokal
+    $('#btnAccount').hidden = false;
+
+    Sync.bind({
+      get: function () { return S; },
+      set: function (v) { S = v; save(); applyTheme(); renderHome(); }
+    });
+
+    Sync.on(function (st) {
+      var b = $('#btnAccount');
+      b.className = 'icon-btn' + (
+        st.status === 'sync' ? ' sync-run' :
+        st.status === 'ok' ? ' sync-ok' :
+        st.status === 'err' ? ' sync-err' : ''
+      );
+      b.textContent = st.on ? (st.status === 'offline' ? '☁' : '☁') : '☁';
+      b.title = st.on
+        ? (st.email + (st.at ? ' — sinxronlangan ' + new Date(st.at).toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' }) : ''))
+        : 'Kirish — progressni qurilmalar orasida saqlash';
+
+      $('#acctOut').hidden = st.on;
+      $('#acctIn').hidden = !st.on;
+      if (st.on) {
+        $('#acctWho').textContent = st.email;
+        $('#acctState').textContent =
+          st.status === 'sync' ? 'Sinxronlanmoqda…' :
+          st.status === 'offline' ? '⚠ ' + st.msg :
+          st.status === 'err' ? '⚠ ' + st.msg :
+          st.at ? '✓ Oxirgi sinxron: ' + new Date(st.at).toLocaleString('uz-UZ') :
+          'Kutilmoqda…';
+      }
+    });
+  }
+
+  function acctBusy(on, err) {
+    $('#acctSignIn').disabled = on;
+    $('#acctSignUp').disabled = on;
+    $('#acctErr').hidden = !err;
+    if (err) $('#acctErr').textContent = err;
+  }
+
+  $('#btnAccount').addEventListener('click', function () {
+    $('#acctErr').hidden = true;
+    $('#acctModal').hidden = false;
+  });
+  $('#acctClose').addEventListener('click', function () { $('#acctModal').hidden = true; });
+  $('#acctModal').addEventListener('click', function (e) {
+    if (e.target === $('#acctModal')) $('#acctModal').hidden = true;
+  });
+
+  function doAuth(fn) {
+    var email = $('#acctEmail').value.trim();
+    var pw = $('#acctPw').value;
+    if (!email || pw.length < 6) { acctBusy(false, 'Email va kamida 6 belgili parol kiriting.'); return; }
+    acctBusy(true, '');
+    fn(email, pw).then(function () {
+      acctBusy(false, '');
+      $('#acctPw').value = '';
+      $('#acctModal').hidden = true;
+      toast('Sinxronizatsiya yoqildi');
+      renderHome();
+    }).catch(function (e) {
+      acctBusy(false, e.message || 'Xato');
+    });
+  }
+  $('#acctSignIn').addEventListener('click', function () { doAuth(Sync.signIn); });
+  $('#acctSignUp').addEventListener('click', function () { doAuth(Sync.signUp); });
+  $('#acctPw').addEventListener('keydown', function (e) { if (e.key === 'Enter') doAuth(Sync.signIn); });
+  $('#acctSignOut').addEventListener('click', function () {
+    Sync.signOut(); $('#acctModal').hidden = true; toast('Chiqildi — progress shu qurilmada qoladi');
+  });
+  $('#acctSync').addEventListener('click', function () {
+    Sync.syncNow().then(function () { renderHome(); });
+  });
+
   /* -------------------- boot -------------------- */
   applyTheme();
   if (!QS.length) {
     $('#view-home').innerHTML = '<div class="empty">questions.js yuklanmadi.</div>';
   } else {
     renderHome();
+    initSync();
   }
 
   if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {

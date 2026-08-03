@@ -23,6 +23,7 @@
   </button>
   <div class="topbar-actions">
     <span class="pill pill-streak" id="streakPill" title="Ketma-ket to'g'ri javoblar">🔥 <b>0</b></span>
+    <button class="icon-btn" id="btnAccount" title="Hisob va sinxronizatsiya" hidden>☁</button>
     <button class="icon-btn" id="btnTheme" title="Mavzu (kunduz/tun)">◐</button>
   </div>
 </header>
@@ -186,10 +187,41 @@
 
 </main>
 
+<!-- ===================== HISOB ===================== -->
+<div class="modal" id="acctModal" hidden>
+  <div class="modal-card">
+    <button class="modal-x" id="acctClose">✕</button>
+
+    <div id="acctOut">
+      <h2>Hisobga kirish</h2>
+      <p class="modal-sub">Progress barcha qurilmalarda birlashadi — kompyuterda boshlab, telefonda davom etasiz. Internetsiz ham ishlaydi, ulanish tiklanganda o'zi sinxronlanadi.</p>
+      <label class="fld"><span>Email</span><input id="acctEmail" type="email" autocomplete="email" placeholder="siz@example.com"></label>
+      <label class="fld"><span>Parol</span><input id="acctPw" type="password" autocomplete="current-password" placeholder="kamida 6 belgi"></label>
+      <p class="modal-err" id="acctErr" hidden></p>
+      <div class="modal-actions">
+        <button class="ghost-btn" id="acctSignUp">Ro'yxatdan o'tish</button>
+        <button class="primary-btn" id="acctSignIn">Kirish</button>
+      </div>
+    </div>
+
+    <div id="acctIn" hidden>
+      <h2>Hisob</h2>
+      <p class="modal-sub" id="acctWho"></p>
+      <div class="sync-state" id="acctState"></div>
+      <div class="modal-actions">
+        <button class="ghost-btn danger" id="acctSignOut">Chiqish</button>
+        <button class="primary-btn" id="acctSync">Hozir sinxronlash</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast" hidden></div>
 
 <script src="questions.js"></script>
 <script src="sheet.js"></script>
+<script src="config.js"></script>
+<script src="sync.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

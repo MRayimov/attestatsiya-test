@@ -360,6 +360,48 @@ b{font-weight:650}
 
 .home-footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line-soft)}
 
+/* ---------------- hisob modali ---------------- */
+.modal{
+  position:fixed;inset:0;z-index:80;display:grid;place-items:center;
+  padding:18px;background:rgba(3,6,18,.62);backdrop-filter:blur(6px);
+  animation:fade .18s ease;
+}
+.modal-card{
+  position:relative;width:100%;max-width:400px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);
+  padding:24px 22px;box-shadow:var(--sh-lg);
+}
+.modal-card h2{margin:0 0 6px;font-size:19px;letter-spacing:-.02em}
+.modal-sub{margin:0 0 18px;font-size:13px;line-height:1.55;color:var(--fg-mute)}
+.modal-x{
+  position:absolute;top:12px;right:12px;width:30px;height:30px;
+  display:grid;place-items:center;border-radius:9px;color:var(--fg-mute);font-size:14px;
+}
+.modal-x:hover{background:var(--bg-soft);color:var(--fg)}
+.fld{display:block;margin-bottom:12px}
+.fld span{display:block;font-size:11.5px;color:var(--fg-mute);margin-bottom:5px}
+.fld input{
+  width:100%;padding:11px 13px;border-radius:var(--r);
+  border:1px solid var(--line);background:var(--card-2);color:var(--fg);
+  font-size:15px;font-family:inherit;-webkit-appearance:none;
+}
+.fld input:focus{outline:none;border-color:var(--brand)}
+.modal-err{
+  margin:0 0 12px;padding:10px 12px;border-radius:var(--r-sm);
+  background:var(--bad-bg);color:var(--bad);font-size:12.5px;line-height:1.5;
+}
+.modal-actions{display:flex;gap:10px;align-items:center;margin-top:18px}
+.modal-actions .primary-btn{margin-left:auto}
+.sync-state{
+  padding:12px 14px;border-radius:var(--r);background:var(--bg-soft);
+  border:1px solid var(--line-soft);font-size:12.8px;color:var(--fg-dim);line-height:1.5;
+}
+.icon-btn.sync-ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,var(--line))}
+.icon-btn.sync-err{color:var(--bad);border-color:var(--bad)}
+.icon-btn.sync-run{color:var(--brand);border-color:var(--brand)}
+.icon-btn.sync-run{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
 /* ---------------- toast ---------------- */
 .toast{
   position:fixed;left:50%;bottom:26px;transform:translateX(-50%);

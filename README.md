@@ -55,8 +55,17 @@ Sayt statik — hech qanday server kerak emas. GitHub Pages'da ochiladi.
 Telefonda: brauzer menyusidan **«Add to Home screen»** → oflayn ham ishlaydi
 (service worker barcha fayllarni keshlaydi).
 
-Progress `localStorage` da saqlanadi. Boshqa qurilmaga o'tkazish uchun
-bosh sahifadagi **«Natijani saqlash / yuklash»** tugmalari.
+## Progress qayerda saqlanadi
+
+Sukut bo'yicha — **shu qurilmaning** `localStorage` ida. Kompyuter va telefon
+alohida hisoblanadi. Qo'lda o'tkazish: bosh sahifadagi
+**«⤓ Natijani saqlash» / «⤒ Natijani yuklash»**.
+
+**Qurilmalar orasida avtomatik sinxron** uchun — [SUPABASE.md](SUPABASE.md)
+(bepul, ~5 daqiqa sozlash). Yoqilgach yuqorida **☁** tugmasi paydo bo'ladi:
+email/parol bilan kirasiz, progress har sessiyadan keyin o'zi birlashadi.
+Ilova **local-first** — internetsiz ham to'xtamaydi, ulanish tiklanganda
+sinxronlanadi.
 
 ## Klaviatura
 
@@ -74,7 +83,9 @@ styles.css      — mavzu (tun/kunduz), responsive
 app.js          — test dvigateli, Leitner qutilari, statistika
 questions.js    — savol banki (window.QUESTIONS)
 sheet.js        — kalit raqamlar shpargalkasi (window.SHEET)
-sw.js           — oflayn kesh
+config.js       — Supabase URL + anon kalit (bo'sh bo'lsa sinxron o'chiq)
+sync.js         — bulutli sinxron: Supabase Auth + PostgREST, merge mantiqi
+sw.js           — oflayn kesh (faqat shu sayt fayllari; API so'rovlari keshlanmaydi)
 ```
 
 ## Ogohlantirish
