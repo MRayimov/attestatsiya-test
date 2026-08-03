@@ -3,8 +3,8 @@
 Attestatsiyaga tayyorgarlik uchun oflayn ishlaydigan test ilovasi.
 Yo'nalish: **tender hujjatlari · texnik topshiriq (ТЗ) · shartnomalar (контракт)** ekspertizasi.
 
-**239 savol** · **96 qatorli kalit raqamlar shpargalkasi** — har biri qonunning
-aniq bandiga qarshi tekshirilgan.
+**239 savol** · **79 qatorli kalit raqamlar shpargalkasi** · **Word qo'llanma** — hammasi
+lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
 
 | Hujjat | Savol | | Yo'nalish | Savol |
 |---|--:|---|---|--:|
@@ -26,6 +26,21 @@ aniq bandiga qarshi tekshirilgan.
 Qo'shimcha: ПҚ-4328 (kiberxavfsizlik), ЗРУ-547 (shaxsiy ma'lumotlar),
 Координационная комиссия «Цифровой Ўзбекистон 2030», ПФ-39 va boshqalar —
 «nima uchun shu hujjat so'raladi» tipidagi amaliy savollarda.
+
+## 📄 Word qo'llanma (chop etish uchun)
+
+**[Tender-TZ-Shartnoma-qollanma.docx](Tender-TZ-Shartnoma-qollanma.docx)** — 5 bo'lim,
+A4, Times New Roman, jadvallar bilan. Yuklab olish: fayl nomiga bosing → **Download**.
+
+| Bo'lim | Nima bor |
+|---|---|
+| Tender | majburiylik chegarasi · komissiya · e'lon muddati · hujjat tarkibi · лот · задаток · baholash · g'olib · shikoyat |
+| Texnik topshiriq | ст.34 taqiqlari va «ёки унинг аналоги» · Прил.2 п.11 majburiy maydonlar · п.12 o'lchanadigan talablar · п.16 javobgarlik |
+| Shartnoma va import kontrakti | п.5/п.6 farqi · talablar · muddatlar · ro'yxatga olish · ст.47 to'lov taqiqi |
+| Markaz ekspertizasi | chegaralar · **п.21 yangi muddat jadvali** · rad asoslari · haq · «nima uchun qaysi hujjat so'raladi» |
+| Adashtiradigan raqamlar | иш куни ↔ календарь кун · summa chegaralari · foizlar · **eski ↔ yangi** normalar |
+
+Barcha faktlar lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
 
 ## Rejimlar
 
