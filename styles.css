@@ -51,6 +51,13 @@ html[data-theme="light"]{
 }
 
 *{box-sizing:border-box}
+
+/* ⚠️ MUHIM: brauzerning [hidden]{display:none} qoidasi UA-stildan keladi va
+   HAR QANDAY muallif qoidasidan (.modal{display:flex}, .opt .why{display:block},
+   .icon-btn{display:grid} …) past turadi. Shu sababli hidden qo'yilgan element
+   ekranda qolib ketardi — hisob oynasi yopilmasdi. Bu qator shuni tuzatadi. */
+[hidden]{display:none !important}
+
 html,body{margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{

@@ -1,6 +1,6 @@
 /* Oflayn ishlash uchun kesh — yo'lda internetsiz test yechish mumkin.
    Faqat SHU sayt fayllari keshlanadi; Supabase so'rovlari keshlanmaydi. */
-var CACHE = 'attest-v4';
+var CACHE = 'attest-v5';
 var ASSETS = [
   './',
   'index.html',
