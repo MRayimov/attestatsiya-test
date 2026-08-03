@@ -1,0 +1,15 @@
+{
+  "name": "Attestatsiya — Davlat xaridlari ekspertizasi",
+  "short_name": "Attestatsiya",
+  "description": "ЗРУ-684 · ПП-332 · ВМ-276 · ПҚ-104 bo'yicha attestatsiyaga tayyorgarlik testi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "lang": "uz",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

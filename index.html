@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>Attestatsiya — Davlat xaridlari ekspertizasi</title>
+<meta name="description" content="ЗРУ-684 · ПП-332 · ВМ-276 · ПҚ-104 bo'yicha attestatsiyaga tayyorgarlik testi">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="brand" id="btnHome" title="Bosh sahifa">
+    <span class="brand-mark">⚖</span>
+    <span class="brand-text">
+      <b>Attestatsiya</b>
+      <small>Davlat xaridlari ekspertizasi</small>
+    </span>
+  </button>
+  <div class="topbar-actions">
+    <span class="pill pill-streak" id="streakPill" title="Ketma-ket to'g'ri javoblar">🔥 <b>0</b></span>
+    <button class="icon-btn" id="btnTheme" title="Mavzu (kunduz/tun)">◐</button>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="view" id="view-home">
+
+    <div class="hero">
+      <h1>Ertangi attestatsiyaga tayyorgarlik</h1>
+      <p class="hero-sub">
+        <b id="statTotalQ">0</b> ta savol · 4 ta asosiy hujjat ·
+        tender, texnik topshiriq va shartnoma yo'nalishi
+      </p>
+      <div class="hero-progress">
+        <div class="hp-row">
+          <span>O'zlashtirilgan</span>
+          <span><b id="hpMastered">0</b> / <span id="hpTotal">0</span></span>
+        </div>
+        <div class="bar"><i id="hpBar" style="width:0%"></i></div>
+        <div class="hp-legend">
+          <span class="lg lg-new"><i></i> Yangi <b id="lgNew">0</b></span>
+          <span class="lg lg-weak"><i></i> Zaif <b id="lgWeak">0</b></span>
+          <span class="lg lg-ok"><i></i> Yaxshi <b id="lgOk">0</b></span>
+          <span class="lg lg-mast"><i></i> Mustahkam <b id="lgMast">0</b></span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="sec-title">Rejimlar</h2>
+    <div class="modes">
+      <button class="mode-card accent-indigo" data-mode="adaptive">
+        <span class="mc-ico">🎯</span>
+        <span class="mc-body">
+          <b>Adaptiv mashq</b>
+          <small>Xato qilganlaringni ko'proq beradi. Cheksiz, darhol izoh bilan.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
+      <button class="mode-card accent-rose" data-mode="mistakes">
+        <span class="mc-ico">🩹</span>
+        <span class="mc-body">
+          <b>Xatolar ustida ish</b>
+          <small>Faqat noto'g'ri javob berganlaring. <i id="cntMistakes">0</i> ta savol.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
+      <button class="mode-card accent-amber" data-mode="exam">
+        <span class="mc-ico">⏱️</span>
+        <span class="mc-body">
+          <b>Imtihon simulyatsiyasi</b>
+          <small>40 savol · 40 daqiqa · natija oxirida. Haqiqiy sharoit.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
+      <button class="mode-card accent-emerald" data-mode="blitz">
+        <span class="mc-ico">⚡</span>
+        <span class="mc-body">
+          <b>Blits — 15 savol</b>
+          <small>Har savolga 30 soniya. Tez takrorlash uchun.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
+      <button class="mode-card accent-sky" id="btnSheet">
+        <span class="mc-ico">📌</span>
+        <span class="mc-body">
+          <b>Shpargalka — kalit raqamlar</b>
+          <small>Muddat, chegara, kim nima qiladi, bandlar. Qidiruv bilan.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+    </div>
+
+    <h2 class="sec-title">Hujjat bo'yicha mashq</h2>
+    <div class="chips" id="docChips"></div>
+    <div class="chips" id="extraChips" style="margin-top:8px"></div>
+
+    <h2 class="sec-title">Yo'nalish bo'yicha mashq</h2>
+    <div class="chips" id="topicChips"></div>
+
+    <h2 class="sec-title">Statistika</h2>
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <h2 class="sec-title">Zaif nuqtalar</h2>
+    <div class="weak-list" id="weakList"></div>
+
+    <div class="home-footer">
+      <button class="ghost-btn" id="btnExport">⤓ Natijani saqlash</button>
+      <button class="ghost-btn" id="btnImport">⤒ Natijani yuklash</button>
+      <button class="ghost-btn danger" id="btnReset">↺ Progressni tozalash</button>
+      <input type="file" id="fileImport" accept="application/json" hidden>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section class="view" id="view-quiz" hidden>
+    <div class="quiz-head">
+      <button class="icon-btn" id="btnQuit" title="Chiqish">✕</button>
+      <div class="qh-meta">
+        <span class="qh-mode" id="qhMode">Mashq</span>
+        <span class="qh-count"><b id="qhIdx">1</b><span id="qhTot"></span></span>
+      </div>
+      <span class="qh-timer" id="qhTimer" hidden>00:00</span>
+    </div>
+    <div class="bar bar-thin"><i id="qhBar" style="width:0%"></i></div>
+
+    <article class="qcard" id="qcard">
+      <div class="qtags">
+        <span class="tag tag-doc" id="qDoc"></span>
+        <span class="tag tag-topic" id="qTopic"></span>
+        <span class="tag tag-ref" id="qRef"></span>
+        <span class="tag tag-diff" id="qDiff"></span>
+      </div>
+      <h2 class="qtext" id="qText"></h2>
+      <div class="options" id="options"></div>
+
+      <div class="explain" id="explain" hidden>
+        <div class="ex-head"><span id="exVerdict"></span></div>
+        <p class="ex-body" id="exBody"></p>
+        <div class="ex-ref" id="exRef"></div>
+      </div>
+    </article>
+
+    <div class="quiz-foot">
+      <button class="ghost-btn" id="btnFlag" title="Keyin qaytish uchun belgilash">☆ Belgilash</button>
+      <button class="primary-btn" id="btnNext" disabled>Keyingisi →</button>
+    </div>
+  </section>
+
+  <!-- ===================== SHEET ===================== -->
+  <section class="view" id="view-sheet" hidden>
+    <div class="quiz-head">
+      <button class="icon-btn" id="btnSheetBack" title="Orqaga">←</button>
+      <div class="qh-meta"><span class="qh-mode">Kalit raqamlar shpargalkasi</span></div>
+    </div>
+    <input class="search" id="sheetSearch" type="search" placeholder="Qidirish: muddat, 6000, ст.71, тендер…" autocomplete="off">
+    <div id="sheetBody"></div>
+    <p class="sheet-foot">Har qator manba bandiga qarshi tekshirilgan. Shubha bo'lsa — lex.uz dagi asl matn.</p>
+  </section>
+
+  <!-- ===================== RESULT ===================== -->
+  <section class="view" id="view-result" hidden>
+    <div class="result-hero">
+      <div class="ring" id="resRing"><span id="resPct">0%</span></div>
+      <h1 id="resTitle">Natija</h1>
+      <p id="resSub"></p>
+    </div>
+    <div class="stats-grid" id="resGrid"></div>
+    <h2 class="sec-title">Xato javoblar tahlili</h2>
+    <div class="review" id="resReview"></div>
+    <div class="quiz-foot sticky">
+      <button class="ghost-btn" id="btnResHome">Bosh sahifa</button>
+      <button class="primary-btn" id="btnResRetry">Xatolar ustida ishlash</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="questions.js"></script>
+<script src="sheet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

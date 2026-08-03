@@ -1,0 +1,83 @@
+# Attestatsiya — Davlat xaridlari ekspertizasi testi
+
+Attestatsiyaga tayyorgarlik uchun oflayn ishlaydigan test ilovasi.
+Yo'nalish: **tender hujjatlari · texnik topshiriq (ТЗ) · shartnomalar (контракт)** ekspertizasi.
+
+**239 savol** · **96 qatorli kalit raqamlar shpargalkasi** — har biri qonunning
+aniq bandiga qarshi tekshirilgan.
+
+| Hujjat | Savol | | Yo'nalish | Savol |
+|---|--:|---|---|--:|
+| ЗРУ-684 | 84 | | Tender | 76 |
+| ПП-332 | 62 | | Umumiy | 54 |
+| ВМ-276 | 58 | | Ekspertiza | 45 |
+| ПҚ-104 | 24 | | Shartnoma | 42 |
+| Umumiy (kross) | 11 | | Texnik topshiriq | 22 |
+
+## Manbalar
+
+| Hujjat | Nomi |
+|---|---|
+| **ЗРУ-684** (22.04.2021) | «О государственных закупках» |
+| **ПП-332** (25.07.2022) | Лойиҳаолди, тендер ҳужжатлари, ТЗ ва шартномалар экспертизаси |
+| **ВМ-276** (20.05.2022) | Давлат харидлари процедураларини ташкил этиш тартиби |
+| **ПҚ-104** (13.03.2026) | Комплекс экспертиза тизими самарадорлигини ошириш |
+
+Qo'shimcha: ПҚ-4328 (kiberxavfsizlik), ЗРУ-547 (shaxsiy ma'lumotlar),
+Координационная комиссия «Цифровой Ўзбекистон 2030», ПФ-39 va boshqalar —
+«nima uchun shu hujjat so'raladi» tipidagi amaliy savollarda.
+
+## Rejimlar
+
+- **Adaptiv mashq** — xato qilingan savollar 7 barobar tez-tez qaytadi (Leitner qutilari).
+  Sessiya oxiriga yaqinlashganda xato savollar avtomatik qo'shiladi.
+- **Xatolar ustida ish** — faqat noto'g'ri javob berilgan savollar.
+- **Imtihon simulyatsiyasi** — 40 savol, 40 daqiqa, hujjatlar bo'yicha mutanosib namuna,
+  natija va to'liq tahlil oxirida.
+- **Blits** — 15 savol, har biriga 30 soniya.
+- **Hujjat / yo'nalish bo'yicha** — bitta bo'limni maqsadli mashq qilish.
+- **Shpargalka** — kalit raqamlar (muddat, chegara, kim nima qiladi, eng ko'p ishlatiladigan
+  bandlar) qidiruv bilan. Imtihon oldidan tez ko'z yugurtirish uchun.
+
+## Eslab qolish mexanikasi
+
+- Har savolda **4 ta variant**, uchtasi ataylab **chalg'ituvchi**: qo'shni raqam
+  (15 ↔ 20 иш куни), qo'shni chegara (6 000 ↔ 25 000 БҲМ), qo'shni band
+  (ст.71 п.8 ↔ п.21), almashtirilgan subyekt (Марказ ↔ буюртмачи ↔ Агентлик).
+- Javobdan keyin **har bir variant uchun** «nega to'g'ri / nega xato» izohi chiqadi.
+- Xato javob savolni 1-qutiga tushiradi → u tez orada qayta chiqadi.
+- Bosh sahifada **zaif nuqtalar** band raqami bo'yicha guruhlanadi.
+
+## Ishlatish
+
+Sayt statik — hech qanday server kerak emas. GitHub Pages'da ochiladi.
+
+Telefonda: brauzer menyusidan **«Add to Home screen»** → oflayn ham ishlaydi
+(service worker barcha fayllarni keshlaydi).
+
+Progress `localStorage` da saqlanadi. Boshqa qurilmaga o'tkazish uchun
+bosh sahifadagi **«Natijani saqlash / yuklash»** tugmalari.
+
+## Klaviatura
+
+| Tugma | Vazifa |
+|---|---|
+| `1` `2` `3` `4` yoki `A` `B` `C` `D` | variant tanlash |
+| `Enter` / `Space` | keyingi savol |
+| `Esc` | sessiyadan chiqish |
+
+## Tuzilma
+
+```
+index.html      — barcha ko'rinishlar (home / quiz / result)
+styles.css      — mavzu (tun/kunduz), responsive
+app.js          — test dvigateli, Leitner qutilari, statistika
+questions.js    — savol banki (window.QUESTIONS)
+sheet.js        — kalit raqamlar shpargalkasi (window.SHEET)
+sw.js           — oflayn kesh
+```
+
+## Ogohlantirish
+
+Test **tayyorgarlik uchun** — rasmiy manba emas. Har savolda band/modda raqami
+ko'rsatilgan; shubha bo'lsa qonunning asl matniga (lex.uz) murojaat qiling.
