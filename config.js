@@ -11,5 +11,5 @@
    Bo'sh qoldirilsa — ilova avvalgidek faqat shu qurilmada
    (localStorage) ishlaydi, sinxronizatsiya o'chiq bo'ladi.
    ============================================================ */
-window.SUPABASE_URL = '';
-window.SUPABASE_ANON_KEY = '';
+window.SUPABASE_URL = 'https://lnabwbkyabtdmzgomcyq.supabase.co';
+window.SUPABASE_ANON_KEY = '';   // ← Settings → API → «anon / public»
