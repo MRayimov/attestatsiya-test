@@ -361,23 +361,35 @@ b{font-weight:650}
 .home-footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line-soft)}
 
 /* ---------------- hisob modali ---------------- */
+/* flex + margin:auto — kartochka ekrandan baland bo'lsa ham
+   yuqorisi kesilmaydi va scroll ishlaydi (grid place-items bunda yiqiladi) */
 .modal{
-  position:fixed;inset:0;z-index:80;display:grid;place-items:center;
-  padding:18px;background:rgba(3,6,18,.62);backdrop-filter:blur(6px);
+  position:fixed;inset:0;z-index:80;
+  display:flex;align-items:center;justify-content:center;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:16px 16px calc(16px + env(safe-area-inset-bottom));
+  background:rgba(3,6,18,.62);backdrop-filter:blur(6px);
   animation:fade .18s ease;
 }
 .modal-card{
-  position:relative;width:100%;max-width:400px;
+  position:relative;width:100%;max-width:400px;margin:auto;
   background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);
-  padding:24px 22px;box-shadow:var(--sh-lg);
+  padding:22px 20px;box-shadow:var(--sh-lg);
 }
-.modal-card h2{margin:0 0 6px;font-size:19px;letter-spacing:-.02em}
+.modal-card h2{margin:0 44px 6px 0;font-size:19px;letter-spacing:-.02em}
 .modal-sub{margin:0 0 18px;font-size:13px;line-height:1.55;color:var(--fg-mute)}
 .modal-x{
-  position:absolute;top:12px;right:12px;width:30px;height:30px;
-  display:grid;place-items:center;border-radius:9px;color:var(--fg-mute);font-size:14px;
+  position:absolute;top:10px;right:10px;width:44px;height:44px;
+  display:grid;place-items:center;border-radius:12px;font-size:16px;
+  background:var(--bg-soft);border:1px solid var(--line);color:var(--fg-dim);
 }
-.modal-x:hover{background:var(--bg-soft);color:var(--fg)}
+.modal-x:hover,.modal-x:active{background:var(--line);color:var(--fg)}
+.modal-skip{
+  display:block;width:100%;margin-top:14px;padding:12px;
+  border-radius:var(--r);font-size:13.5px;color:var(--fg-mute);
+  background:var(--bg-soft);border:1px solid var(--line-soft);
+}
+.modal-skip:hover{color:var(--fg);border-color:var(--line)}
 .fld{display:block;margin-bottom:12px}
 .fld span{display:block;font-size:11.5px;color:var(--fg-mute);margin-bottom:5px}
 .fld input{

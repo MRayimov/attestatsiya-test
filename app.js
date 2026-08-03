@@ -709,10 +709,15 @@
     h.hidden = !s || s === v.toLowerCase();
     if (!h.hidden) h.innerHTML = 'Login: <code>' + esc(s) + '</code>';
   });
-  $('#acctClose').addEventListener('click', function () { $('#acctModal').hidden = true; });
+  function closeAcct() { $('#acctModal').hidden = true; }
+  $('#acctClose').addEventListener('click', closeAcct);
+  $('#acctSkip').addEventListener('click', closeAcct);
   $('#acctModal').addEventListener('click', function (e) {
-    if (e.target === $('#acctModal')) $('#acctModal').hidden = true;
+    if (e.target === $('#acctModal')) closeAcct();
   });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !$('#acctModal').hidden) { closeAcct(); e.stopPropagation(); }
+  }, true);
 
   function doAuth(fn) {
     var login = $('#acctEmail').value.trim();
