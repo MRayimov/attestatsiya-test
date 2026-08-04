@@ -7,6 +7,7 @@
 
   var QS = (window.QUESTIONS || []).slice();
   var KEY = 'attest.v1';
+  var APP_VER = '10';
 
   /* -------------------- store -------------------- */
   var S = load();
@@ -196,6 +197,15 @@
       return '<div class="weak"><span class="wt"><b>' + esc(x.ref) + '</b><small>' + esc(x.doc) + ' · ' + esc(x.topic) + '</small></span>' +
         '<span class="wn">' + x.w + ' xato</span></div>';
     }).join('') : '<div class="empty">Hali xato yo\'q — mashqni boshlang.</div>';
+
+    renderVersion();
+  }
+
+  function renderVersion() {
+    var el = $('#verLine'); if (!el) return;
+    var nc = ((window.CARDS && window.CARDS.blocks) || []).reduce(function (n, b) { return n + (b.answers || []).length; }, 0);
+    var ns = ((window.SHEET && window.SHEET.groups) || []).reduce(function (n, g) { return n + (g.rows || []).length; }, 0);
+    el.textContent = 'v' + APP_VER + ' · ' + QS.length + ' test savoli · ' + nc + ' namunaviy · ' + ns + ' shpargalka qatori';
   }
 
   function accColor(a) { return a >= 80 ? 'var(--ok)' : a >= 60 ? 'var(--warn)' : 'var(--bad)'; }
@@ -887,7 +897,29 @@
     initSync();
   }
 
+  /* -------------------- avtomatik yangilanish --------------------
+     Muammo: eski service worker eski index.html ni beradi — unda yangi
+     <script> teglari yo'q, natijada yangi bo'lim «0 ta» ko'rinadi va
+     ochilmaydi. Yechim: yangi SW boshqaruvni olganda sahifa BIR MARTA
+     o'zi qayta yuklanadi. */
   if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
-    navigator.serviceWorker.register('sw.js').catch(function () {});
+    var reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (reloaded) return;
+      reloaded = true;
+      location.reload();
+    });
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+      reg.addEventListener('updatefound', function () {
+        var nw = reg.installing;
+        if (!nw) return;
+        nw.addEventListener('statechange', function () {
+          if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+            toast('Yangi versiya — yangilanmoqda…');
+          }
+        });
+      });
+      if (reg.update) reg.update().catch(function () {});
+    }).catch(function () {});
   }
 })();

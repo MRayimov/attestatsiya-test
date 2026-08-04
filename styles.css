@@ -419,6 +419,7 @@ b{font-weight:650}
 .rv .rref{margin-top:6px;font-size:11px;color:var(--fg-mute)}
 
 .home-footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line-soft)}
+.version{margin:14px 0 0;font-size:11px;color:var(--fg-mute);text-align:center;line-height:1.6}
 
 /* ---------------- hisob modali ---------------- */
 /* flex + margin:auto — kartochka ekrandan baland bo'lsa ham
