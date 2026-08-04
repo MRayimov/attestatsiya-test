@@ -7,7 +7,7 @@
 
   var QS = (window.QUESTIONS || []).slice();
   var KEY = 'attest.v1';
-  var APP_VER = '12';
+  var APP_VER = '13';
 
   /* -------------------- store -------------------- */
   var S = load();
@@ -664,10 +664,17 @@
 
   function renderCardChips() {
     var html = '<button class="chip' + (C.filter ? '' : ' on') + '" data-cb="">Hammasi<span class="n">' + flat.length + '</span></button>';
+    var lastG = '';
     CARDS.forEach(function (b) {
+      // yo'nalish o'zgarganda ajratuvchi yorliq
+      if (b.group && b.group !== lastG) {
+        lastG = b.group;
+        html += '<span class="chip-group">' + esc(b.group) + '</span>';
+      }
       var n = (b.answers || []).length;
       var bilgan = (b.answers || []).filter(function (a) { return known({ key: b.key, n: a.n }); }).length;
-      html += '<button class="chip" data-cb="' + esc(b.key) + '">' + esc(b.block) +
+      var nom = String(b.block || '').replace(/^[^·]+·\s*/, '');
+      html += '<button class="chip" data-cb="' + esc(b.key) + '" title="' + esc(b.block) + '">' + esc(nom) +
         '<span class="n">' + bilgan + '/' + n + '</span></button>';
     });
     $('#cardBlocks').innerHTML = html;

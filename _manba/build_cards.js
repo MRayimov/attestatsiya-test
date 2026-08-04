@@ -5,13 +5,15 @@ const JOURNALS = process.argv.slice(3);
 
 // blok kaliti -> ko'rsatiladigan nom va tartib
 const META = {
-  'it-1':          { title: 'IT keyslar (1–10)',        order: 1 },
-  'keys':          { title: 'IT keyslar (1–10)',        order: 1 },
-  'it-2':          { title: 'IT savollar (11–20)',      order: 2 },
-  'uz2030':        { title: "O'zbekiston — 2030",       order: 3 },
-  'ish-yuritish':  { title: 'Ish yuritish va til',      order: 4 },
-  'eksp-1':        { title: 'ПП-332 va ekspertiza',     order: 5 },
-  'eksp-2':        { title: 'Ekspertiza (davomi)',      order: 6 },
+  'it-1':         { group: 'IT',     title: 'IT · keyslar (1–10)',           order: 1 },
+  'keys':         { group: 'IT',     title: 'IT · keyslar (1–10)',           order: 1 },
+  'it-2':         { group: 'IT',     title: 'IT · protsedura (11–20)',       order: 2 },
+  'sanoat-a':     { group: 'Sanoat', title: 'Sanoat · ЗРУ-684 + ПҚ-332',     order: 3 },
+  'sanoat-b':     { group: 'Sanoat', title: 'Sanoat · ВМ-276 nizomi',        order: 4 },
+  'uz2030':       { group: 'Umumiy', title: "Umumiy · O'zbekiston — 2030",  order: 5 },
+  'ish-yuritish': { group: 'Umumiy', title: 'Umumiy · ish yuritish va til',  order: 6 },
+  'eksp-1':       { group: 'Umumiy', title: 'Umumiy · ПҚ-332 va ekspertiza', order: 7 },
+  'eksp-2':       { group: 'Umumiy', title: 'Umumiy · ekspertiza (davomi)',  order: 8 },
 };
 
 function unesc(s) {
@@ -86,7 +88,7 @@ for (const [key, m] of byKey) {
       ref: unesc(a.ref),
       tags: Array.isArray(a.tags) ? a.tags.slice(0, 3).map(unesc) : [],
     }));
-  if (answers.length) blocks.push({ key, block: meta.title, order: meta.order, answers });
+  if (answers.length) blocks.push({ key, group: meta.group || 'Umumiy', block: meta.title, order: meta.order, answers });
 }
 blocks.sort((a, b) => a.order - b.order);
 blocks.forEach(b => delete b.order);

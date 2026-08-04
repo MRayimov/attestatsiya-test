@@ -218,6 +218,15 @@ b{font-weight:650}
   font-weight:650;margin:18px 0 9px;
 }
 .card-group:first-child{margin-top:0}
+/* chiplar orasidagi yo'nalish yorlig'i */
+.chip-group{
+  display:inline-flex;align-items:center;
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;
+  font-weight:700;color:var(--fg-mute);
+  padding:0 4px 0 10px;margin-left:2px;
+  border-left:2px solid var(--line);
+}
+.chip-group:first-child{border-left:0;padding-left:0;margin-left:0}
 .mc-ico{
   width:42px;height:42px;flex:none;display:grid;place-items:center;font-size:20px;
   border-radius:13px;background:color-mix(in srgb, var(--mc) 14%, transparent);

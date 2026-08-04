@@ -10,6 +10,18 @@ ularni saytga yangi yo'nalish sifatida qo'shish.
 - **19 tasida `reuse` maydoni bor** — javobi `cards.js` dagi IT blokidan
   ko'chiriladi, qayta yozilmaydi. Ya'ni **321 ta yangi javob** kerak.
 
+## ⚠️ 60 ta UMUMIY savol — qayta yaratilmaydi
+
+`cards.js` da allaqachon javob bilan turgan **60 ta umumiy savol** (Umumiy 60:
+O'zbekiston-2030 20 · ish yuritish va til 12 · ПҚ-332 va ekspertiza 14 ·
+ekspertiza davomi 14) **har ikkala yo'nalishga ham tegishli** — IT ga ham,
+Sanoat ga ham. Ular `group: "Umumiy"` bilan belgilangan va ilovada alohida
+yorliq ostida ko'rinadi.
+
+**Ularni qayta yaratmang va nusxalamang** — bloklar umumiy, ikkala yo'nalish
+foydalanuvchisiga baribir ko'rinadi. Yangi `sanoat-a` va `sanoat-b` bloklariga
+`group: "Sanoat"` qo'yiladi (xarita `_manba/build_cards.js` dagi META da).
+
 ## Manbalar — FAQAT lex.uz amaldagi tahriri
 
 Vault'dagi `06 - Qonunchilik/` nusxalari **2026-08-03 da yangilangan**, ulardan
