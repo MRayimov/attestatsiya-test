@@ -7,7 +7,7 @@
 
   var QS = (window.QUESTIONS || []).slice();
   var KEY = 'attest.v1';
-  var APP_VER = '10';
+  var APP_VER = '11';
 
   /* -------------------- store -------------------- */
   var S = load();
