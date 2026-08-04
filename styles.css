@@ -18,9 +18,10 @@
   --brand:#7c8cff;
   --brand-2:#a78bfa;
 
-  /* rejim kartochkalari — oltitasi bir-biridan aniq farq qilsin */
+  /* rejim kartochkalari — har biri bir-biridan aniq farq qilsin */
   --acc-violet:#d68bfc;
   --acc-sky:#38bdf8;
+  --acc-teal:#2dd4bf;
   --ok:#34d399;
   --ok-bg:rgba(52,211,153,.12);
   --bad:#fb7185;
@@ -49,6 +50,7 @@ html[data-theme="light"]{
   /* oq fonda yetarli kontrast uchun to'qroq */
   --acc-violet:#9333ea;
   --acc-sky:#0284c7;
+  --acc-teal:#0d9488;
   --ok:#0e9f6e;
   --ok-bg:rgba(14,159,110,.10);
   --bad:#e11d48;
@@ -175,6 +177,7 @@ b{font-weight:650}
 .accent-emerald{--mc:var(--ok)}
 .accent-sky{--mc:var(--acc-sky)}
 .accent-violet{--mc:var(--acc-violet)}
+.accent-teal{--mc:var(--acc-teal)}
 
 /* ---------------- namunaviy savollar (kartochka) ---------------- */
 .reveal-btn{

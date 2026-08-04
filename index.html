@@ -92,11 +92,20 @@
         <span class="mc-go">→</span>
       </button>
 
-      <button class="mode-card accent-violet" id="btnCards">
-        <span class="mc-ico">🗂️</span>
+      <button class="mode-card accent-violet" id="btnCardsIT" data-dir="IT">
+        <span class="mc-ico">💻</span>
         <span class="mc-body">
-          <b>Namunaviy savollar</b>
-          <small>Ish beruvchi bergan savollar — javobi bilan. <i id="cntCards">0</i> ta.</small>
+          <b>Namunaviy savollar — IT</b>
+          <small>IT va raqamlashtirish yo'nalishi + umumiy bloklar. <i id="cntCardsIT">0</i> ta.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
+      <button class="mode-card accent-teal" id="btnCardsSanoat" data-dir="Sanoat">
+        <span class="mc-ico">🏭</span>
+        <span class="mc-body">
+          <b>Namunaviy savollar — Sanoat</b>
+          <small>Asosiy sanoat tarmoqlari va ijtimoiy soha + umumiy bloklar. <i id="cntCardsSanoat">0</i> ta.</small>
         </span>
         <span class="mc-go">→</span>
       </button>
@@ -173,7 +182,7 @@
     <div class="quiz-head">
       <button class="icon-btn" id="btnCardsBack" title="Orqaga">←</button>
       <div class="qh-meta">
-        <span class="qh-mode">Namunaviy savollar</span>
+        <span class="qh-mode" id="cardDir">Namunaviy savollar</span>
         <span class="qh-count"><b id="cardIdx">1</b><span id="cardTot"></span></span>
       </div>
       <button class="icon-btn" id="btnCardList" title="Ro'yxat">☰</button>

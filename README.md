@@ -51,18 +51,20 @@ Barcha faktlar lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilga
 o'ylab olasiz, keyin javobni ochasiz. Javob ikki qatlamda — **qisqa** (imtihonda
 birinchi aytiladigan gap) va **to'liq** (asos, raqamlar, bandlar).
 
-| Yo'nalish | Blok | Savol |
-|---|---|--:|
-| IT | keyslar (1–10) — «nima qonuniy, nima emas» | 10 |
-| IT | protsedura (11–20) | 10 |
-| **Sanoat** | ЗРУ-684 + ПҚ-332 | **300** |
-| **Sanoat** | ВМ-276 nizomi | **40** |
-| Umumiy | «O'zbekiston — 2030» | 20 |
-| Umumiy | ish yuritish va o'zbek tili | 12 |
-| Umumiy | ПП-332 va ekspertiza | 28 |
+Bosh sahifada **ikkita alohida bo'lim**. Har biri faqat o'z yo'nalishini ko'rsatadi —
+IT foydalanuvchisi Sanoat savollarini ko'rmaydi va aksincha:
+
+| 💻 **Namunaviy savollar — IT** | 80 ta | 🏭 **Namunaviy savollar — Sanoat** | 400 ta |
+|---|--:|---|--:|
+| keyslar (1–10) — «nima qonuniy, nima emas» | 10 | ЗРУ-684 + ПҚ-332 | 300 |
+| protsedura (11–20) | 10 | ВМ-276 nizomi | 40 |
+| *+ umumiy bloklar* | 60 | *+ umumiy bloklar* | 60 |
+
+**Umumiy bloklar** (60 ta) ikkala yo'nalishga ham kiradi: «O'zbekiston — 2030» (20) ·
+ish yuritish va o'zbek tili (12) · ПП-332 va ekspertiza (28).
 
 Sanoat bloklaridagi 19 ta savol IT bloklari bilan bir xil — javob takrorlanmay, o'sha
-javobning o'zi ko'rsatiladi. Umumiy bloklar (60 ta) ikkala yo'nalishga ham tegishli.
+javobning o'zi ko'rsatiladi.
 
 «✓ Bilaman» belgisi saqlanadi, blok bo'yicha filtr va ro'yxat ko'rinishi bor.
 

@@ -7,7 +7,7 @@
 
   var QS = (window.QUESTIONS || []).slice();
   var KEY = 'attest.v1';
-  var APP_VER = '14';
+  var APP_VER = '15';
 
   /* -------------------- store -------------------- */
   var S = load();
@@ -138,8 +138,13 @@
     $('#hpBar').style.width = pct(b.mast + b.ok * 0.5, QS.length) + '%';
 
     $('#cntMistakes').textContent = mistakePool().length;
-    if ($('#cntCards')) $('#cntCards').textContent = ((window.CARDS && window.CARDS.blocks) || [])
-      .reduce(function (n, b) { return n + (b.answers || []).length; }, 0);
+    // namunaviy savollar — har yo'nalish uchun alohida hisob (Umumiy ikkalasiga ham kiradi)
+    ['IT', 'Sanoat'].forEach(function (dir) {
+      var el = $('#cntCards' + dir); if (!el) return;
+      el.textContent = ((window.CARDS && window.CARDS.blocks) || []).reduce(function (n, b) {
+        return n + ((b.group === dir || b.group === 'Umumiy') ? (b.answers || []).length : 0);
+      }, 0);
+    });
     $('#streakPill').innerHTML = '🔥 <b>' + S.streak + '</b>';
 
     // hujjat chiplari
@@ -641,14 +646,24 @@
   $('#sheetSearch').addEventListener('input', function (e) { renderSheet(e.target.value); });
 
   /* -------------------- namunaviy savollar (kartochka) -------------------- */
+  /* Ikki yo'nalish alohida: IT foydalanuvchisi Sanoat bloklarini ko'rmaydi va aksincha.
+     «Umumiy» bloklar ikkalasiga ham kiradi. */
   var CARDS = (window.CARDS && window.CARDS.blocks) || [];
-  var flat = [];
-  CARDS.forEach(function (b) {
-    (b.answers || []).forEach(function (a) {
-      flat.push({ block: b.block, key: b.key, n: a.n, q: a.q, short: a.short, full: a.full, ref: a.ref });
+
+  function blocksFor(dir) {
+    return CARDS.filter(function (b) { return b.group === dir || b.group === 'Umumiy'; });
+  }
+  function flatFor(dir) {
+    var out = [];
+    blocksFor(dir).forEach(function (b) {
+      (b.answers || []).forEach(function (a) {
+        out.push({ block: b.block, key: b.key, n: a.n, q: a.q, short: a.short, full: a.full, ref: a.ref });
+      });
     });
-  });
-  var C = { list: flat, i: 0, filter: null };
+    return out;
+  }
+
+  var C = { dir: 'IT', flat: [], list: [], i: 0, filter: null };
 
   function cardId(c) { return c.key + '-' + c.n; }
   function known(c) { return !!(S.cards && S.cards[cardId(c)]); }
@@ -659,13 +674,13 @@
   }
 
   function cardPool() {
-    return C.filter ? flat.filter(function (c) { return c.key === C.filter; }) : flat;
+    return C.filter ? C.flat.filter(function (c) { return c.key === C.filter; }) : C.flat;
   }
 
   function renderCardChips() {
-    var html = '<button class="chip' + (C.filter ? '' : ' on') + '" data-cb="">Hammasi<span class="n">' + flat.length + '</span></button>';
+    var html = '<button class="chip' + (C.filter ? '' : ' on') + '" data-cb="">Hammasi<span class="n">' + C.flat.length + '</span></button>';
     var lastG = '';
-    CARDS.forEach(function (b) {
+    blocksFor(C.dir).forEach(function (b) {
       // yo'nalish o'zgarganda ajratuvchi yorliq
       if (b.group && b.group !== lastG) {
         lastG = b.group;
@@ -724,17 +739,29 @@
     $('#cardListView').innerHTML = html || '<div class="empty">Savol yo\'q</div>';
   }
 
-  function openCards() {
-    if (!flat.length) { toast('Namunaviy savollar yuklanmadi'); return; }
-    C.list = cardPool(); C.i = 0;
+  function dirNom(dir) {
+    var g = ((window.CARDS && window.CARDS.groups) || []).filter(function (x) { return x.key === dir })[0];
+    return g ? g.nom : dir;
+  }
+
+  function openCards(dir) {
+    C.dir = dir || C.dir;
+    C.flat = flatFor(C.dir);
+    if (!C.flat.length) { toast('Namunaviy savollar yuklanmadi'); return; }
+    C.filter = null; C.i = 0;
+    C.list = cardPool();
+    $('#cardDir').textContent = 'Namunaviy · ' + C.dir;
+    $('#cardDir').title = dirNom(C.dir);
     renderCardChips(); renderCard();
     $('#cardListView').hidden = true;
     $('#cardView').hidden = false;
+    $$('#view-cards .quiz-foot').forEach(function (e) { e.hidden = false; });
     show('cards');
   }
 
-  var btnCards = $('#btnCards');
-  if (btnCards) btnCards.addEventListener('click', openCards);
+  $$('[data-dir]').forEach(function (b) {
+    b.addEventListener('click', function () { openCards(b.dataset.dir); });
+  });
   $('#btnCardsBack').addEventListener('click', goHome);
 
   $('#btnReveal').addEventListener('click', function () {
