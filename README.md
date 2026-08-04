@@ -3,8 +3,11 @@
 Attestatsiyaga tayyorgarlik uchun oflayn ishlaydigan test ilovasi.
 Yo'nalish: **tender hujjatlari · texnik topshiriq (ТЗ) · shartnomalar (контракт)** ekspertizasi.
 
-**239 test savoli** · **80 namunaviy savol javobi bilan** · **79 qatorli shpargalka** ·
-**Word qo'llanma** — hammasi lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
+**239 test savoli** · **420 namunaviy savol javobi bilan** · **79 qatorli shpargalka** ·
+**Word qo'llanma** — hammasi lex.uz dagi **amaldagi** tahrirga (2026-08-04) qarshi tekshirilgan.
+
+Namunaviy savollar ikki yo'nalish bo'yicha: **IT va raqamlashtirish** hamda
+**asosiy sanoat tarmoqlari va ijtimoiy soha**; 60 ta umumiy blok ikkalasiga ham tegishli.
 
 | Hujjat | Savol | | Yo'nalish | Savol |
 |---|--:|---|---|--:|
@@ -44,17 +47,22 @@ Barcha faktlar lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilga
 
 ## 🗂️ Namunaviy savollar (ish beruvchi bergan)
 
-**80 ta ochiq savol javobi bilan** — test emas, kartochka rejimi: savol ko'rsatiladi,
+**420 ta ochiq savol javobi bilan** — test emas, kartochka rejimi: savol ko'rsatiladi,
 o'ylab olasiz, keyin javobni ochasiz. Javob ikki qatlamda — **qisqa** (imtihonda
 birinchi aytiladigan gap) va **to'liq** (asos, raqamlar, bandlar).
 
-| Blok | Savol |
-|---|--:|
-| IT keyslar (1–10) — «nima qonuniy, nima emas» | 10 |
-| IT savollar (11–20) — protsedura | 10 |
-| «O'zbekiston — 2030» | 20 |
-| Ish yuritish va o'zbek tili | 12 |
-| ПП-332 va ekspertiza | 28 |
+| Yo'nalish | Blok | Savol |
+|---|---|--:|
+| IT | keyslar (1–10) — «nima qonuniy, nima emas» | 10 |
+| IT | protsedura (11–20) | 10 |
+| **Sanoat** | ЗРУ-684 + ПҚ-332 | **300** |
+| **Sanoat** | ВМ-276 nizomi | **40** |
+| Umumiy | «O'zbekiston — 2030» | 20 |
+| Umumiy | ish yuritish va o'zbek tili | 12 |
+| Umumiy | ПП-332 va ekspertiza | 28 |
+
+Sanoat bloklaridagi 19 ta savol IT bloklari bilan bir xil — javob takrorlanmay, o'sha
+javobning o'zi ko'rsatiladi. Umumiy bloklar (60 ta) ikkala yo'nalishga ham tegishli.
 
 «✓ Bilaman» belgisi saqlanadi, blok bo'yicha filtr va ro'yxat ko'rinishi bor.
 
