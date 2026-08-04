@@ -12,7 +12,7 @@
   var S = load();
 
   function load() {
-    var d = { v: 1, q: {}, sessions: [], streak: 0, best: 0, theme: 'dark', goal: 40, today: null, todayN: 0 };
+    var d = { v: 1, q: {}, cards: {}, sessions: [], streak: 0, best: 0, theme: 'dark', goal: 40, today: null, todayN: 0 };
     try {
       var raw = localStorage.getItem(KEY);
       if (raw) {
@@ -137,6 +137,8 @@
     $('#hpBar').style.width = pct(b.mast + b.ok * 0.5, QS.length) + '%';
 
     $('#cntMistakes').textContent = mistakePool().length;
+    if ($('#cntCards')) $('#cntCards').textContent = ((window.CARDS && window.CARDS.blocks) || [])
+      .reduce(function (n, b) { return n + (b.answers || []).length; }, 0);
     $('#streakPill').innerHTML = '🔥 <b>' + S.streak + '</b>';
 
     // hujjat chiplari
@@ -207,7 +209,7 @@
 
   /* -------------------- views -------------------- */
   function show(v) {
-    ['home', 'quiz', 'result', 'sheet'].forEach(function (x) { $('#view-' + x).hidden = x !== v; });
+    ['home', 'quiz', 'result', 'sheet', 'cards'].forEach(function (x) { $('#view-' + x).hidden = x !== v; });
     window.scrollTo({ top: 0, behavior: 'instant' in document.body.style ? 'instant' : 'auto' });
   }
   function goHome() {
@@ -555,7 +557,7 @@
   $('#btnReset').addEventListener('click', function () {
     if (!confirm('Barcha progress o\'chiriladi. Davom etasizmi?')) return;
     var theme = S.theme;
-    S = { v: 1, q: {}, sessions: [], streak: 0, best: 0, theme: theme, goal: 40, today: null, todayN: 0 };
+    S = { v: 1, q: {}, cards: {}, sessions: [], streak: 0, best: 0, theme: theme, goal: 40, today: null, todayN: 0 };
     save(); renderHome(); toast('Progress tozalandi');
   });
   $('#btnExport').addEventListener('click', function () {
@@ -627,6 +629,134 @@
   }
   $('#btnSheetBack').addEventListener('click', goHome);
   $('#sheetSearch').addEventListener('input', function (e) { renderSheet(e.target.value); });
+
+  /* -------------------- namunaviy savollar (kartochka) -------------------- */
+  var CARDS = (window.CARDS && window.CARDS.blocks) || [];
+  var flat = [];
+  CARDS.forEach(function (b) {
+    (b.answers || []).forEach(function (a) {
+      flat.push({ block: b.block, key: b.key, n: a.n, q: a.q, short: a.short, full: a.full, ref: a.ref });
+    });
+  });
+  var C = { list: flat, i: 0, filter: null };
+
+  function cardId(c) { return c.key + '-' + c.n; }
+  function known(c) { return !!(S.cards && S.cards[cardId(c)]); }
+  function setKnown(c, v) {
+    if (!S.cards) S.cards = {};
+    if (v) S.cards[cardId(c)] = 1; else delete S.cards[cardId(c)];
+    save();
+  }
+
+  function cardPool() {
+    return C.filter ? flat.filter(function (c) { return c.key === C.filter; }) : flat;
+  }
+
+  function renderCardChips() {
+    var html = '<button class="chip' + (C.filter ? '' : ' on') + '" data-cb="">Hammasi<span class="n">' + flat.length + '</span></button>';
+    CARDS.forEach(function (b) {
+      var n = (b.answers || []).length;
+      var bilgan = (b.answers || []).filter(function (a) { return known({ key: b.key, n: a.n }); }).length;
+      html += '<button class="chip" data-cb="' + esc(b.key) + '">' + esc(b.block) +
+        '<span class="n">' + bilgan + '/' + n + '</span></button>';
+    });
+    $('#cardBlocks').innerHTML = html;
+  }
+
+  function renderCard() {
+    var pool = C.list;
+    if (!pool.length) { $('#cardQ').textContent = 'Savol yo\'q'; return; }
+    if (C.i >= pool.length) C.i = pool.length - 1;
+    if (C.i < 0) C.i = 0;
+    var c = pool[C.i];
+
+    $('#cardIdx').textContent = C.i + 1;
+    $('#cardTot').textContent = ' / ' + pool.length;
+    $('#cardBar').style.width = pct(C.i + 1, pool.length) + '%';
+    $('#cardBlock').textContent = c.block;
+    $('#cardNo').textContent = '№' + c.n;
+    $('#cardRef').textContent = c.ref || '';
+    $('#cardRef').hidden = !c.ref;
+    $('#cardQ').textContent = c.q;
+
+    $('#cardShort').textContent = c.short || '';
+    $('#cardFull').innerHTML = (c.full || '').split('\n').map(function (l) {
+      l = l.trim();
+      if (!l) return '';
+      return /^[•\-–]\s*/.test(l)
+        ? '<span class="li">• ' + esc(l.replace(/^[•\-–]\s*/, '')) + '</span>'
+        : '<span class="li" style="padding-left:0;text-indent:0">' + esc(l) + '</span>';
+    }).join('');
+
+    $('#cardAnswer').hidden = true;
+    $('#btnReveal').hidden = false;
+    $('#btnCardKnow').classList.toggle('on', known(c));
+    $('#btnCardKnow').textContent = known(c) ? '✓ Bilaman' : '✓ Bilaman';
+    $('#btnCardNext').textContent = (C.i === pool.length - 1) ? 'Yakuniga ✓' : 'Keyingisi →';
+  }
+
+  function renderCardList() {
+    var html = '', last = '';
+    C.list.forEach(function (c, i) {
+      if (c.block !== last) { html += '<div class="card-group">' + esc(c.block) + '</div>'; last = c.block; }
+      html += '<button class="card-row' + (known(c) ? ' known' : '') + '" data-ci="' + i + '">' +
+        '<span class="n">' + c.n + '</span>' +
+        '<span class="t">' + esc(c.q.length > 110 ? c.q.slice(0, 110) + '…' : c.q) +
+        (c.ref ? '<small>' + esc(c.ref) + '</small>' : '') + '</span></button>';
+    });
+    $('#cardListView').innerHTML = html || '<div class="empty">Savol yo\'q</div>';
+  }
+
+  function openCards() {
+    if (!flat.length) { toast('Namunaviy savollar yuklanmadi'); return; }
+    C.list = cardPool(); C.i = 0;
+    renderCardChips(); renderCard();
+    $('#cardListView').hidden = true;
+    $('#cardView').hidden = false;
+    show('cards');
+  }
+
+  var btnCards = $('#btnCards');
+  if (btnCards) btnCards.addEventListener('click', openCards);
+  $('#btnCardsBack').addEventListener('click', goHome);
+
+  $('#btnReveal').addEventListener('click', function () {
+    $('#cardAnswer').hidden = false;
+    this.hidden = true;
+  });
+  $('#btnCardNext').addEventListener('click', function () {
+    if (C.i >= C.list.length - 1) { goHome(); return; }
+    C.i++; renderCard(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  $('#btnCardPrev').addEventListener('click', function () {
+    if (C.i > 0) { C.i--; renderCard(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  });
+  $('#btnCardKnow').addEventListener('click', function () {
+    var c = C.list[C.i]; if (!c) return;
+    setKnown(c, !known(c));
+    renderCardChips(); renderCard();
+  });
+  $('#btnCardList').addEventListener('click', function () {
+    var showList = $('#cardListView').hidden;
+    if (showList) renderCardList();
+    $('#cardListView').hidden = !showList;
+    $('#cardView').hidden = showList;
+    $$('#view-cards .quiz-foot').forEach(function (e) { e.hidden = showList; });
+  });
+  $('#cardListView').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-ci]'); if (!b) return;
+    C.i = parseInt(b.dataset.ci, 10);
+    $('#cardListView').hidden = true; $('#cardView').hidden = false;
+    $$('#view-cards .quiz-foot').forEach(function (x) { x.hidden = false; });
+    renderCard(); window.scrollTo({ top: 0, behavior: 'instant' in document.body.style ? 'instant' : 'auto' });
+  });
+  $('#cardBlocks').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cb]'); if (!b) return;
+    C.filter = b.dataset.cb || null;
+    C.list = cardPool(); C.i = 0;
+    $$('#cardBlocks .chip').forEach(function (x) { x.classList.toggle('on', (x.dataset.cb || null) === C.filter); });
+    if (!$('#cardListView').hidden) renderCardList(); else renderCard();
+  });
 
   /* -------------------- keyboard -------------------- */
   document.addEventListener('keydown', function (e) {

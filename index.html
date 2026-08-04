@@ -92,6 +92,15 @@
         <span class="mc-go">→</span>
       </button>
 
+      <button class="mode-card accent-violet" id="btnCards">
+        <span class="mc-ico">🗂️</span>
+        <span class="mc-body">
+          <b>Namunaviy savollar</b>
+          <small>Ish beruvchi bergan savollar — javobi bilan. <i id="cntCards">0</i> ta.</small>
+        </span>
+        <span class="mc-go">→</span>
+      </button>
+
       <button class="mode-card accent-sky" id="btnSheet">
         <span class="mc-ico">📌</span>
         <span class="mc-body">
@@ -155,6 +164,45 @@
     <div class="quiz-foot">
       <button class="ghost-btn" id="btnFlag" title="Keyin qaytish uchun belgilash">☆ Belgilash</button>
       <button class="primary-btn" id="btnNext" disabled>Keyingisi →</button>
+    </div>
+  </section>
+
+  <!-- ===================== NAMUNAVIY SAVOLLAR ===================== -->
+  <section class="view" id="view-cards" hidden>
+    <div class="quiz-head">
+      <button class="icon-btn" id="btnCardsBack" title="Orqaga">←</button>
+      <div class="qh-meta">
+        <span class="qh-mode">Namunaviy savollar</span>
+        <span class="qh-count"><b id="cardIdx">1</b><span id="cardTot"></span></span>
+      </div>
+      <button class="icon-btn" id="btnCardList" title="Ro'yxat">☰</button>
+    </div>
+    <div class="bar bar-thin"><i id="cardBar" style="width:0%"></i></div>
+
+    <div class="chips" id="cardBlocks" style="margin-bottom:14px"></div>
+
+    <div id="cardListView" hidden></div>
+
+    <article class="qcard" id="cardView">
+      <div class="qtags">
+        <span class="tag tag-doc" id="cardBlock"></span>
+        <span class="tag" id="cardNo"></span>
+        <span class="tag tag-ref" id="cardRef"></span>
+      </div>
+      <h2 class="qtext" id="cardQ"></h2>
+
+      <div id="cardAnswer" hidden>
+        <div class="ans-short" id="cardShort"></div>
+        <div class="ans-full" id="cardFull"></div>
+      </div>
+
+      <button class="reveal-btn" id="btnReveal">Javobni ko'rish</button>
+    </article>
+
+    <div class="quiz-foot">
+      <button class="ghost-btn" id="btnCardPrev">← Oldingi</button>
+      <button class="ghost-btn" id="btnCardKnow" title="Bilaman deb belgilash">✓ Bilaman</button>
+      <button class="primary-btn" id="btnCardNext">Keyingisi →</button>
     </div>
   </section>
 
@@ -224,6 +272,7 @@
 
 <script src="questions.js"></script>
 <script src="sheet.js"></script>
+<script src="cards.js"></script>
 <script src="config.js"></script>
 <script src="sync.js"></script>
 <script src="app.js"></script>

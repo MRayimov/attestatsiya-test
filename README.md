@@ -3,8 +3,8 @@
 Attestatsiyaga tayyorgarlik uchun oflayn ishlaydigan test ilovasi.
 Yo'nalish: **tender hujjatlari · texnik topshiriq (ТЗ) · shartnomalar (контракт)** ekspertizasi.
 
-**239 savol** · **79 qatorli kalit raqamlar shpargalkasi** · **Word qo'llanma** — hammasi
-lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
+**239 test savoli** · **80 namunaviy savol javobi bilan** · **79 qatorli shpargalka** ·
+**Word qo'llanma** — hammasi lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
 
 | Hujjat | Savol | | Yo'nalish | Savol |
 |---|--:|---|---|--:|
@@ -41,6 +41,25 @@ A4, Times New Roman, jadvallar bilan. Yuklab olish: fayl nomiga bosing → **Dow
 | Adashtiradigan raqamlar | иш куни ↔ календарь кун · summa chegaralari · foizlar · **eski ↔ yangi** normalar |
 
 Barcha faktlar lex.uz dagi **amaldagi** tahrirga (2026-08-03) qarshi tekshirilgan.
+
+## 🗂️ Namunaviy savollar (ish beruvchi bergan)
+
+**80 ta ochiq savol javobi bilan** — test emas, kartochka rejimi: savol ko'rsatiladi,
+o'ylab olasiz, keyin javobni ochasiz. Javob ikki qatlamda — **qisqa** (imtihonda
+birinchi aytiladigan gap) va **to'liq** (asos, raqamlar, bandlar).
+
+| Blok | Savol |
+|---|--:|
+| IT keyslar (1–10) — «nima qonuniy, nima emas» | 10 |
+| IT savollar (11–20) — protsedura | 10 |
+| «O'zbekiston — 2030» | 20 |
+| Ish yuritish va o'zbek tili | 12 |
+| ПП-332 va ekspertiza | 28 |
+
+«✓ Bilaman» belgisi saqlanadi, blok bo'yicha filtr va ro'yxat ko'rinishi bor.
+
+⚠️ **ПФ-158** («O'zbekiston — 2030») **17.02.2026 da kuchini yo'qotgan**, o'rniga
+**ПФ-21** (16.02.2026) qabul qilingan — javoblarda ikkalasi ham ko'rsatilgan.
 
 ## Rejimlar
 
@@ -99,6 +118,7 @@ styles.css      — mavzu (tun/kunduz), responsive
 app.js          — test dvigateli, Leitner qutilari, statistika
 questions.js    — savol banki (window.QUESTIONS)
 sheet.js        — kalit raqamlar shpargalkasi (window.SHEET)
+cards.js        — namunaviy savollar javobi bilan (window.CARDS)
 config.js       — Supabase URL + anon kalit (bo'sh bo'lsa sinxron o'chiq)
 sync.js         — bulutli sinxron: Supabase Auth + PostgREST, merge mantiqi
 sw.js           — oflayn kesh (faqat shu sayt fayllari; API so'rovlari keshlanmaydi)
