@@ -1,0 +1,1775 @@
+{
+ "manba": "Savollar asosiy sanoat tarmoqlari+ijtimoiy soha.pdf (OCR, 2026-08-03)",
+ "yonalish": "Asosiy sanoat tarmoqlari va ijtimoiy soha",
+ "bolimlar": [
+  {
+   "key": "sanoat-a",
+   "nom": "ЗРУ-684 + ПҚ-332 bo'yicha savollar",
+   "savollar": [
+    {
+     "n": 1,
+     "q": "Server uskunalari bo'yicha texnik topshiriqda koʻrsatilgan: A ishlab chiqaruvchisining aniq modeldagi protsessori, operativ xotira “kamida 512 GB”, A ishlab chiqaruvchisining vakolatli hamkori sertifikati majburiyligi. Bu yerda nima qonuniy, nima qonuniy emas?",
+     "reuse": {
+      "block": "it-1",
+      "n": 1
+     }
+    },
+    {
+     "n": 2,
+     "q": "Buyurtmachi shart qo'ygan: aynan ushbu sohada oʻxshash uskunani yetkazib berish boʻyicha kamida besh yillik tajriba va viloyat markazida o'z (ijaraga olingan emas) omborining mavjudligi. Baholang.",
+     "reuse": null
+    },
+    {
+     "n": 3,
+     "q": "Bitta lotga serverlar, amaliy dasturiy ta'minot litsenziyalari va server xonasi tomini ta'mirlash ishlari kiritilgan. Nima buzilgan?",
+     "reuse": {
+      "block": "it-1",
+      "n": 2
+     }
+    },
+    {
+     "n": 4,
+     "q": "Bir turdagi uskunaga bo'lgan ehtiyoj — 80 000 BHM. Buyurtmachi har biri 20 000 BHM dan to'rtta shartnoma rasmiylashtirib, toʻrtta tanlash oʻtkazgan. Buni qanday kvalifikatsiya qilish kerak?",
+     "reuse": {
+      "block": "it-1",
+      "n": 3
+     }
+    },
+    {
+     "n": 5,
+     "q": "Buyurtmachi faqat joriy yilda ishlab chiqarilgan, yangi va foydalanilmagan uskunani yetkazib berishni talab qilmoqda. Bu qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 6,
+     "q": "Baholash mezoni: “ishtirokchining ishbilarmonlik obroʻsi — komissiya ixtiyoriga koʻra 20 balligacha”. Bunga yoʻl qo'yiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 7,
+     "q": "Takliflar qabul qilinishi tugashiga uch ish kuni qolganda buyurtmachi tender hujjatlarida oʻtkazish qobiliyatiga qo'yilgan talabni aniqlashtirmoqchi. U nima qilishga haqli va yana nima haqida oʻylashi kerak?",
+     "reuse": {
+      "block": "it-1",
+      "n": 5
+     }
+    },
+    {
+     "n": 8,
+     "q": "Ishtirokchi takliflar berish tugashiga bir ish kuni qolganda tender hujjatlari yuzasidan tushuntirish so'rovini yuborgan. Buyurtmachi javob berishi shartmi?",
+     "reuse": {
+      "block": "it-1",
+      "n": 6
+     }
+    },
+    {
+     "n": 9,
+     "q": "Tenderga bitta ariza berilgan. Tanlashga ham bitta. Auksionga hech kim yozilmagan. Oqibatlarni taqqoslang.",
+     "reuse": null
+    },
+    {
+     "n": 10,
+     "q": "Tender g'olibi shartnoma tuzishdan bosh tortdi. Harakatlar ketma-ketligini tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 11,
+     "q": "Buyurtmachi 5 000 BHM lik xonalarni tozalash xizmatlari boʻyicha narxni pasaytirish auksionini o'tkazmoqchi. Bu mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 12,
+     "q": "Budjet buyurtmachisi elektron doʻkon orqali 3 000 BHM lik mebel sotib olmoqchi. Bu qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 13,
+     "q": "Korporativ buyurtmachi moliya yili davomida soddalashtirilgan tartib-taomil bo'yicha 950 BHM lik xaridlar amalga oshirgan va yana 100 BHM lik xarid qilmoqchi. Bu mumkinmi va bu tartib-taomil umuman qanday tashkil etilgan?",
+     "reuse": null
+    },
+    {
+     "n": 14,
+     "q": "Korporativ buyurtmachi 20 000 BHM ni jiddiy summa deb hisoblab, ishonch uchun tender o'tkazmoqchi. Bu yerda nima notoʻgʻri?",
+     "reuse": null
+    },
+    {
+     "n": 15,
+     "q": "Prezident qarori bilan buyurtmachiga tender o'tkazmasdan uskuna xarid qilishga ruxsat berilgan. Summa — 40 000 BHM, buyurtmachi korporativ. Xarid marshrutini tuzing.",
+     "reuse": null
+    },
+    {
+     "n": 16,
+     "q": "Tendersiz xaridga ruxsat beruvchi Prezident qarorida allaqachon ishlab chiqilgan texnik topshiriq keltirilgan. Uni Markazga yuborish kerakmi?",
+     "reuse": null
+    },
+    {
+     "n": 17,
+     "q": "Loyiha Osiyo taraqqiyot banki qarzi hisobidan moliyalashtiriladi; xarid — 3 mln AQSh dollari. U 2-ilova Nizomining 3-bandi “b” kichik bandiga toʻgʻri keladimi?",
+     "reuse": null
+    },
+    {
+     "n": 18,
+     "q": "80 000 BHM lik chet el ishlanmasi boʻlgan AT tizimini xarid qilish. Ekspertizagacha qanday qoʻshimcha kelishuvlar talab qilinadi?",
+     "reuse": {
+      "block": "it-1",
+      "n": 7
+     }
+    },
+    {
+     "n": 19,
+     "q": "Tender komissiyasi olti kishidan shakllantirilgan; majlisda toʻrt nafari qatnashgan; qaror uchta ovoz bilan bittaga qarshi qabul qilingan. Qonuniyligini baholang.",
+     "reuse": null
+    },
+    {
+     "n": 20,
+     "q": "Komissiya a'zosi ovoz bergan, bir haftadan keyin esa uning g'olibning rahbari bilan qarindoshligi ma'lum bo'lgan. Natijalar bilan nima boʻladi?",
+     "reuse": null
+    },
+    {
+     "n": 21,
+     "q": "Buyurtmachi muassislari orasida davlat xaridlari elektron tizimi operatori boʻlgan ixtisoslashgan tashkilotni jalb etgan va unga g'olib bilan shartnoma imzolashni topshirgan. Qoidabuzarliklarni tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 22,
+     "q": "Elektron savdo maydonchasi operatori buyurtmachiga boshlang'ich narxni tuzatishni va kuchsiz yetkazib beruvchilarni chetlatish uchun e'lon matnini “tuzatishni” taklif qildi. Nima buziladi?",
+     "reuse": null
+    },
+    {
+     "n": 23,
+     "q": "G'olib aniqlanguniga qadar buyurtmachi ishtirokchilardan biri bilan uchrashuv oʻtkazib, uning taklifini tuzatish imkoniyatini muhokama qilgan. Oqibatlar?",
+     "reuse": null
+    },
+    {
+     "n": 24,
+     "q": "Tender natijalari ustidan shikoyat berilgan. Tartib-taomil bilan nima boʻladi va qanday muddatlarda?",
+     "reuse": null
+    },
+    {
+     "n": 25,
+     "q": "Shikoyatlarni koʻrib chiqish boʻyicha komissiya a'zosi ishtirokchi bilan affillangan bo'lib chiqdi. Bu qanday tartibga solingan?",
+     "reuse": null
+    },
+    {
+     "n": 26,
+     "q": "Buyurtmachi komissiya g'olibni aniqlaganidan keyin, ammo akseptdan oldin xaridni bekor qildi. Bu qonuniymi va u g'olib oldida javobgarmi?",
+     "reuse": null
+    },
+    {
+     "n": 27,
+     "q": "Tanlash natijalari bo'yicha shartnoma tuzilgan, ammo ma'lumotlar Shartnomalarning yagona reyestriga kiritimagan. Buxgalteriya to'lovni amalga oshirishni so'ramoqda. Sizning harakatlaringiz?",
+     "reuse": null
+    },
+    {
+     "n": 28,
+     "q": "Reja-jadvallarni joylashtirish muddatlarini tekshiring: budjet buyurtmachisi yillik rejani 10-aprelda, korporativ buyurtmachi 20-yanvarda joriy yilga, IV chorak uchun choraklik reja esa 20-sentabrda joylashtirilgan.",
+     "reuse": null
+    },
+    {
+     "n": 29,
+     "q": "Tenderning bitta lotiga bosh kompaniya va uning sho'ba jamiyati taklif berdi. Komissiya nima qilishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 30,
+     "q": "Ishtirokchi rekvizitlari oʻzgartirilgan va aylanmasi oshirib koʻrsatilgan bank ma'lumotnomasini taqdim etdi. Nima tahdid soladi va qaysi asosda?",
+     "reuse": null
+    },
+    {
+     "n": 31,
+     "q": "14 oy avval insofsiz ijrochilar reyestriga kiritilgan ishtirokchi taklif berdi. Komissiya ikkilanmoqda: muddat oʻtmagan, ammo qaror sudda shikoyat qilinmoqda.",
+     "reuse": null
+    },
+    {
+     "n": 32,
+     "q": "Buyurtmachining xodimi ishdan boʻshaganidan keyin ishtirokchi tashkilotga ishga kirgan va tender arafasida unga raqobatchilar takliflari mazmuni toʻgʻrisidagi ma'lumotlarni yetkazgan. Buni qanday kvalifikatsiya qilish kerak?",
+     "reuse": null
+    },
+    {
+     "n": 33,
+     "q": "Buyurtmachi odob-axloq qoidalarini qabul qilgan, ammo e'lon qilmagan. Bu ahamiyatga egami?",
+     "reuse": null
+    },
+    {
+     "n": 34,
+     "q": "Buyurtmachi xarid tartib-taomillarini tashkil etish va o'tkazish uchun mas'ul shaxsni belgilamay, vazifalarni “vaziyatga qarab” taqsimlagan. Nima buzilgan?",
+     "reuse": null
+    },
+    {
+     "n": 35,
+     "q": "Qonunda va PQ-332 da Markaz turlicha nomlangan va turli idoralarga kiritilgan. Bu tafovutga amalda qanday munosabatda bo'lish kerak?",
+     "reuse": null
+    },
+    {
+     "n": 36,
+     "q": "Buyurtmachi 71-moddaning birinchi qismi 14-bandi bo'yicha (shartnoma boshlang'ich summasining 10 foizi doirasidagi qoʻshimcha ishlar) to'g'ridan-toʻgʻri shartnoma rasmiylashtirmoqda. Markazda ekspertiza kerakmi?",
+     "reuse": null
+    },
+    {
+     "n": 37,
+     "q": "71-moddadagi toʻg'ʻridan-toʻg'ʻri xaridlar asoslaridan qaysilari PQ-332 bo'yicha majburiy ekspertiza ro'yxatiga kirmasligini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 38,
+     "q": "Buyurtmachi to'gʻridan-toʻg'ri asos bo'yicha 30 000 BHM lik shartnoma tuzgan, majburiyatlar 40 foizga bajarilgan, endi tomonlar yetkazib berish grafigini o'zgartirish to'g'risida qo'shimcha kelishuv rasmiylashtirmoqchi. Markaz nima deydi?",
+     "reuse": null
+    },
+    {
+     "n": 39,
+     "q": "Asosiy shartnoma o'z vaqtida ekspertizadan o'tmagan (summa haddan past edi), endi qo'shimcha kelishuv jami qiymatni haddan yuqoriga chiqarmoqda. Qo'shimcha kelishuv ekspertizaga tortiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 40,
+     "q": "Buyurtmachi e'tirozlar yoʻqligi to'g'risida xat oldi, ammo imzolashda tomonlar matnga “kosmetik xarakterdagi” tuzatishlar kiritdi. Shartnoma roʻyxatdan o'tkazishga taqdim etildi. Nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 41,
+     "q": "Import kontrakti offshor hududda roʻyxatdan o'tgan norezident foydasiga to'lovni nazarda tutadi, bunda yetkazib beruvchi — mashhur zavod-ishlab chiqaruvchi. Yetkazib beruvchining obro'si qutqaradimi?",
+     "reuse": null
+    },
+    {
+     "n": 42,
+     "q": "Buyurtmachi tender hujjatlari ekspertizasi uchun hujjatlarni topshirdi, xizmat haqini to'ladi, keyin esa xaridni bekor qilib, mablag'larni qaytarishni talab qilmoqda. Vaziyatni har ikki hujjat bo'yicha tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 43,
+     "q": "Buyurtmachi narx qismi bo'yicha e'tirozlar bilan xulosa oldi: Markaz boshlang'ich narxning oʻrtacha bozor darajasidan oshib ketganini aniqlagan. Buyurtmachi uchta tijorat taklifiga havola qilmoqda. Bu yetarlimi?",
+     "reuse": null
+    },
+    {
+     "n": 44,
+     "q": "Import kontrakti loyihasi ingliz tilida tuzilgan, tomonlar ingliz matnini ustuvor deb hisoblashga kelishgan. Markaz nimani talab qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 45,
+     "q": "Texnologik liniya yetkazib berish shartnomasida montaj, ishga tushirish-sozlash, xodimlarni o'qitish va royalti nazarda tutilgan, hammasi yagona summaga kiritilgan. Markazning e'tirozi boʻladimi?",
+     "reuse": null
+    },
+    {
+     "n": 46,
+     "q": "Qabul qilishda boshqa modeldagi uskuna yetkazib berilgani, garchi xususiyatlari yaxshiroq bo'lsa-da, ma'lum boʻldi. Yetkazib beruvchi qoʻshimcha kelishuvni orqa sana bilan rasmiylashtirishni taklif qilmoqda. Taklifni baholang.",
+     "reuse": null
+    },
+    {
+     "n": 47,
+     "q": "Buyurtmachi tender uchta gʻolibi bilan uch yilga hadli kelishuv tuzgan, ammo amalda e'lon qilingan hajmning atigi 40 foizini tanlagan. Yetkazib beruvchilarning da'volari asoslimi?",
+     "reuse": null
+    },
+    {
+     "n": 48,
+     "q": "Markazlashgan xarid organi tartib-taomilni buzgan holda xarid oʻtkazdi; buyurtmachi tovarni qabul qilib oldi. Kim javobgar va buyurtmachi tartibni buzgan hisoblanadimi?",
+     "reuse": null
+    },
+    {
+     "n": 49,
+     "q": "Buyurtmachi “tibbiy uskunalar” toifasi boʻyicha malakali ishtirokchilar roʻyxatini yuritmoqda. Ro'yxatga kiritilgan ishtirokchilardan biri talablar qattiqlashtirilgani haqida o'ziga xabar berilmaganini aytmoqda. Tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 50,
+     "q": "Kompleks keys. Korporativ buyurtmachi oʻz mablag'lari hisobidan 60 000 BHM lik uskunali import axborot tizimini xarid qilmoqda. Rejalashtirishdan toʻlovgacha boʻlgan toʻliq marshrutni tuzing va muddatlar ko'pincha buziladigan nazorat nuqtalarini belgilang.",
+     "reuse": null
+    },
+    {
+     "n": 51,
+     "q": "“Davlat xaridlari”, “xarid qilish tartib-taomili” va “davlat xaridlari jarayoni” tushunchalarini farqlang.",
+     "reuse": null
+    },
+    {
+     "n": 52,
+     "q": "Xarid qilish tartib-taomillari ishtirokchisi davlat xaridlarining ijrochisidan nimasi bilan farq qiladi? Ularning majburiyatlarida nima umumiy?",
+     "reuse": null
+    },
+    {
+     "n": 53,
+     "q": "Zaxiradagi g'olib nima va bu konstruksiyaning mazmuni nimada?",
+     "reuse": null
+    },
+    {
+     "n": 54,
+     "q": "“Ishtirokchining affillangan shaxsi” va “manfaatlar to'qnashuvi” tushunchalari qanday nisbatda?",
+     "reuse": null
+    },
+    {
+     "n": 55,
+     "q": "Ixtisoslashgan tashkilot bilan ekspert (ekspert tashkiloti)ni farqlang.",
+     "reuse": null
+    },
+    {
+     "n": 56,
+     "q": "Elektron tizim operatori, davlat xaridlarining elektron tizimi va maxsus axborot portalini farqlang.",
+     "reuse": null
+    },
+    {
+     "n": 57,
+     "q": "Elektron doʻkon kichik qiymatli xaridning soddalashtirilgan tartib-taomilidan nimasi bilan farq qiladi — ta'rif, mexanizm va limitlar boʻyicha?",
+     "reuse": null
+    },
+    {
+     "n": 58,
+     "q": "Tender, eng yaxshi takliflarni tanlash va ikki bosqichli davlat xaridlariga ta'rif bering hamda ular mazmunan nimasi bilan farq qilishini koʻrsating.",
+     "reuse": null
+    },
+    {
+     "n": 59,
+     "q": "Boshlang'ich narxni pasaytirish uchun oʻtkaziladigan auksion va dastlabki malaka tanloviga ta'rif bering.",
+     "reuse": null
+    },
+    {
+     "n": 60,
+     "q": "PQ-332 shartnoma loyihasi, import kontrakti loyihasi va qoʻshimcha kelishuv loyihasini qanday farqlaydi?",
+     "reuse": null
+    },
+    {
+     "n": 61,
+     "q": "Markazning elektron axborot platformasi nima va u maxsus axborot portalidan nimasi bilan farq qiladi? Benefitsiar mulkdor qanday aniqlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 62,
+     "q": "Davlat xaridlarining asosiy prinsiplarini sanang va ular qaysi bosqichlarda qoʻllanilishini koʻrsating.",
+     "reuse": null
+    },
+    {
+     "n": 63,
+     "q": "Asoslanganlik prinsipining mazmunini oching.",
+     "reuse": null
+    },
+    {
+     "n": 64,
+     "q": "Moliyaviy mablag'lardan foydalanishning oqilonaligi, tejamkorligi va samaradorligi prinsipini oching.",
+     "reuse": null
+    },
+    {
+     "n": 65,
+     "q": "Ochiqlik va shaffoflik qanday mexanizmlar orqali ro'yobga chiqariladi?",
+     "reuse": null
+    },
+    {
+     "n": 66,
+     "q": "Raqobat va xolislik prinsipini oching.",
+     "reuse": null
+    },
+    {
+     "n": 67,
+     "q": "Mutanosiblik prinsipi nimadan iborat?",
+     "reuse": null
+    },
+    {
+     "n": 68,
+     "q": "Barqarorlik prinsipini oching va uni qo'llashda buyurtmachi hisobga olishi shart bo'lgan omillarni sanang.",
+     "reuse": null
+    },
+    {
+     "n": 69,
+     "q": "Davlat xaridlari tizimining yagonaligi va yaxlitligi nima bilan ta'minlanadi hamda korrupsiyaga yo'l qo'ymaslik prinsipi qanday roʻyobga chiqariladi?",
+     "reuse": null
+    },
+    {
+     "n": 70,
+     "q": "Davlat xaridlarining toʻliq subyektlar tarkibini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 71,
+     "q": "Qonun davlat buyurtmachilarini qanday boʻladi va bu boʻlinish bilan qanday tashkiliy majburiyatlar bogʻliq?",
+     "reuse": null
+    },
+    {
+     "n": 72,
+     "q": "Davlat buyurtmachisining huquqlarini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 73,
+     "q": "Davlat buyurtmachisining majburiyatlarini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 74,
+     "q": "Xarid komissiyasi qanday shakllantiriladi, uning tarkibi, kvorumi va ovoz berish tartibiga qanday talablar qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 75,
+     "q": "Xarid komissiyasining vazifalarini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 76,
+     "q": "Xarid komissiyasi nima uchun javobgar va nima uchun javobgar emas?",
+     "reuse": null
+    },
+    {
+     "n": 77,
+     "q": "Ixtisoslashgan tashkilot qanday talablarga javob berishi kerak va uni jalb etishda javobgarlik qanday taqsimlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 78,
+     "q": "Elektron tizim operatorining majburiyatlari, taqiqlari va javobgarligi chegaralari qanday?",
+     "reuse": null
+    },
+    {
+     "n": 79,
+     "q": "Xarid qilish tartib-taomillari ishtirokchilariga qanday talablar qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 80,
+     "q": "Xarid qilish tartib-taomillarining turlarini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 81,
+     "q": "Xarid usullari o'rtasidagi qiymat hadlarining qurilish mantig'ini tushuntiring.",
+     "reuse": null
+    },
+    {
+     "n": 82,
+     "q": "Elektron do'kon orqali xarid mexanizmini tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 83,
+     "q": "Auksionni oʻtkazish tartibi va uning oʻtkazilmagan deb topilishi oqibatlarini tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 84,
+     "q": "Eng yaxshi takliflarni tanlashni oʻtkazish tartibi va uning asosiy muddatlarini tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 85,
+     "q": "Tenderni oʻtkazish tartibini, shu jumladan ikki bosqichli baholashni tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 86,
+     "q": "Ikki bosqichli davlat xaridlarining oʻziga xosligi nimada?",
+     "reuse": null
+    },
+    {
+     "n": 87,
+     "q": "To'g'ridan-to'g'ʻri shartnomalar tizimini va yagona yetkazib beruvchidan xaridni tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 88,
+     "q": "“Davlat xaridlari (09 1519а\": Qonunning amal qilish sohasini va undan istisnolarni belgilang.",
+     "reuse": null
+    },
+    {
+     "n": 89,
+     "q": "Davlat xaridlarini rejalashtirish qanday tashkil etilgan?",
+     "reuse": null
+    },
+    {
+     "n": 90,
+     "q": "Davlat xaridi obyektining tavsifiga qanday talablar qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 91,
+     "q": "Takliflarni baholash mezonlari va xarid qiymatini baholash qanday tartibga solingan?",
+     "reuse": null
+    },
+    {
+     "n": 92,
+     "q": "Davlat xaridlari jarayonida amal qiladigan cheklovlarni sanang.",
+     "reuse": null
+    },
+    {
+     "n": 93,
+     "q": "Takliflarni ta'minlash, muzokaralar taqiqi, aksept va xaridni bekor qilish qanday tartibga solingan?",
+     "reuse": null
+    },
+    {
+     "n": 94,
+     "q": "Davlat xaridlari toʻgʻrisidagi axborotga nimalar kiradi va maxsus axborot portalining vazifasi nimadan iborat?",
+     "reuse": null
+    },
+    {
+     "n": 95,
+     "q": "Shartnomalarning yagona reyestriga va Insofsiz ijrochilarning yagona reyestriga qanday ma'lumotlar kiritiladi?",
+     "reuse": null
+    },
+    {
+     "n": 96,
+     "q": "Qonun monitoring va nazoratni qanday farqlaydi hamda davlat nazoratini qaysi organlar amalga oshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 97,
+     "q": "Jamoatchilik nazoratini kim amalga oshiradi va uning huquqiy shakllari qanday?",
+     "reuse": null
+    },
+    {
+     "n": 98,
+     "q": "Davlat xaridlari sohasida shikoyat qilish instituti qanday tashkil etilgan?",
+     "reuse": null
+    },
+    {
+     "n": 99,
+     "q": "“Davlat xaridlari toʻgʻrisida”i Qonunning Kompleks ekspertiza markaziga havola qiluvchi barcha normalarini sanang va ekspertiza xarid jarayoni konstruksiyasiga qanday o'rnatilganini koʻrsating.",
+     "reuse": null
+    },
+    {
+     "n": 100,
+     "q": "“Davlat xaridlari toʻg'risida”i Qonunning 34-moddasi va O`zbekiston Respublikasi Prezidentining 2022-y. 25-iyuldagi PQ-332 -son qaroriga 2-ilova Nizomining 11—-13-bandlaridagi xarid obyekti tavsifiga qo'yiladigan talablarni taqqoslang. Qonunosti hujjati Qonunni nimada rivojlantiradi?",
+     "reuse": null
+    },
+    {
+     "n": 101,
+     "q": "Korporativ buyurtmachi respublika budjeti mablag'lari hisobidan 15 000 BHM summasiga uskunalar xarid qilishni rejalashtirmoqda. Ushbu buyurtmachi qanday kvalifikatsiya qilinadi va tender hujjatlari majburiy ekspertizadan o'tkaziladimi?",
+     "reuse": null
+    },
+    {
+     "n": 102,
+     "q": "Prezident hujjati bilan uskunalar xaridini tendersiz, tanlash orqali o'tkazish huquqi berilgan. Korporativ buyurtmachi uchun xarid summasi — 30 000 BHM. Hujjatlar Markazda ekspertizadan o'tishi kerakmi va qanday shaklda?",
+     "reuse": null
+    },
+    {
+     "n": 103,
+     "q": "Agar xarid O'zbekiston Respublikasining xaridlarning alohida tartibini belgilovchi xalqaro shartnomasi bilan tasdiqlangan investitsiya bitimi doirasida amalga oshirilsa, Markazda import kontraktlari ekspertizasi bo'yicha talablar qo'llaniladimi?",
+     "reuse": null
+    },
+    {
+     "n": 104,
+     "q": "Korxona xorijda ishlab chiqarilgan dasturiy ta'minot va IT-uskunalarni xarid qilishni rejalashtirmoqda. Markazga hujjatlarning to'liq paketi topshirildi, biroq «Raqamli O'zbekiston — 2030» Komissiyasining qarori yo'q. Markazning harakatlari qanday bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 105,
+     "q": "Agar mablag'lar O'zbekiston Respublikasining tijorat banki orqali qayta moliyalashtirilsa, davlat tashqi qarzi hisobidan moliyalashtiriladigan loyihalar bo'yicha tender hujjatlari Markazda ekspertizadan o'tkaziladimi?",
+     "reuse": null
+    },
+    {
+     "n": 106,
+     "q": "Buyurtmachi «Davlat xaridlari to'g'risida»gi Qonun 71-moddasi 1-qismi 15-bandiga muvofiq o'z mablag'lari hisobidan 8 000 BHM summasiga to'g'ridan-to'g'ri shartnoma tuzdi. Agar buyurtmachi korporativ bo'lsa, ushbu shartnoma ekspertizadan o'tkazilishi shartmi?",
+     "reuse": null
+    },
+    {
+     "n": 107,
+     "q": "Agar qo'shimcha bitim Markazning dastlabki e'tirozidan (seksiyasidan) 7 oy o'tgach ekspertizaga qayta topshirilsa, uning huquqiy maqomi qanday belgilanadi?",
+     "reuse": null
+    },
+    {
+     "n": 108,
+     "q": "Buyurtmachi serverlar etkazib berish, IT-markaz binosini mukammal ta'mirlash va klining xizmatlarini bitta tender lotiga birlashtirishga qaror qildi. Texnik topshiriq talablari nuqtai nazaridan bu yo'l qo'yiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 109,
+     "q": "Hujjatlarni topshirish bosqichida import kontrakti bo'yicha norezident etkazib beruvchi offshor hududida ro'yxatdan o'tganligi aniqlandi. Narx pasaytirilgan taqdirda Markazda bunday kontraktni tasdiqlash diskretsiyasi mavjudmi?",
+     "reuse": null
+    },
+    {
+     "n": 110,
+     "q": "Agar asosiy kontraktning o'zi 5 yil oldin imzolangan va ilgari Markazda ekspertizadan o'tmagan bo'lsa, kontrakt summasini oshirish bo'yicha qo'shimcha bitim ekspertizadan o'tkaziladimi?",
+     "reuse": null
+    },
+    {
+     "n": 111,
+     "q": "Xarid summasi 100 000 BHMdan oshgan taqdirda ham, buyurtmachiga texnik topshiriqni/tender hujjatlarini Markazga ekspertizaga yubormaslikka qaysi holatda ruxsat beriladi?",
+     "reuse": null
+    },
+    {
+     "n": 112,
+     "q": "Markaz xulosasini olgunga qadar etkazib beruvchi tovar hajmining 10 foizini etkazib bergan bo'lsa, shartnomaning kompleks ekspertizasini o'tkazishga yo'l qo'yiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 113,
+     "q": "Tovar pozitsiyalari soni 15 ta bo'lganda, qiymati 120 000 BHM bo'lgan xarid uchun xaridning murakkablik kategoriyasi va TT ekspertizasi muddati qanday tasniflanadi?",
+     "reuse": null
+    },
+    {
+     "n": 114,
+     "q": "Buyurtmachi binoni mukammal ta'mirlash bo'yicha TT yubordi. Markaz loyiha-smeta hujjatlarini (LSH) taqdim etishni talab qilmoqda. Buyurtmachi LSH shart emas, defekt akti etarli deb ta'kidlamoqda. Kim haq?",
+     "reuse": null
+    },
+    {
+     "n": 115,
+     "q": "Agar buyurtmachi xarid faqat mahalliy ishlab chiqaruvchilar o'rtasida amalga oshiriladi deb e'lon qilsa, TTning narx qismini ekspertizadan o'tkazish tartibi qanday bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 116,
+     "q": "Boshlang'ich narxi QQSsiz 400 mlrd so'm bo'lgan tijorat loti uchun tender hujjatlari ekspertizasi to'lovini hisoblang (BHM = 460 000 so'm deb olganda).",
+     "reuse": null
+    },
+    {
+     "n": 117,
+     "q": "Tiklanish va taraqqiyot jamg'armasi mablag'lari hisobidan QQSsiz 50 mlrd so'm summasiga xarid bo'yicha hisob-kitob o'tkazilganda tender hujjatlari ekspertizasi uchun qancha summa ushlab qolinadi (BHM = 460 000 so'm)?",
+     "reuse": null
+    },
+    {
+     "n": 118,
+     "q": "Qiymati 500 mln AQSh dollari bo'lgan investitsiya loyihasining TEO ekspertizasi qiymatini hisoblang.",
+     "reuse": null
+    },
+    {
+     "n": 119,
+     "q": "Qiymati 10 mln AQSh dollari bo'lgan loyihanining TER (texnik-iqtisodiy hisob-kitob) ekspertizasi uchun to'lov qanday hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 120,
+     "q": "Buyurtmachi shartnoma summasini 100 ming AQSh dollariga oshirish bo'yicha kontraktga Qo'shimcha bitim topshirdi. Ekspertiza yig'imi qaysi hisob-kitobdan to'lanadi?",
+     "reuse": null
+    },
+    {
+     "n": 121,
+     "q": "Agar buyurtmachi moliyalashtirish bekor qilingani sababli 10-ish kunida shartnoma ekspertizasiga berilgan talabnomani qaytarib olsa, Markaz ekspertiza uchun to'langan pulni qaytaradimi?",
+     "reuse": null
+    },
+    {
+     "n": 122,
+     "q": "Binolar va inshootlarni mukammal ta'mirlash xaridlari bo'yicha TT kompleks ekspertizasi to'lovi qanday amalga oshiriladi?",
+     "reuse": null
+    },
+    {
+     "n": 123,
+     "q": "Buyurtmachi o'z mablag'lari hisobidan 10 000 BHM summasiga TTni ekspertizaga ihtiyoriy ravishda topshirmoqda. Yig'im miqdori va to'lash tartibi qanday?",
+     "reuse": null
+    },
+    {
+     "n": 124,
+     "q": "Markazning ekspertiza xizmatlari uchun qisman oldindan to'lovga (masalan, 30% yoki 50%) yo'l qo'yiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 125,
+     "q": "Loyihalarning TEO/TER ekspertizasi uchun yig'im qaysi valyutada hisoblanadi va to'lanadi?",
+     "reuse": null
+    },
+    {
+     "n": 126,
+     "q": "Tender doirasida 25 ta pozitsiyadagi tovar xarid qilinsa va summa 8 000 BHMni tashkil etsa, tender hujjatlari ekspertizasi muddatining chegarasi qancha?",
+     "reuse": null
+    },
+    {
+     "n": 127,
+     "q": "Agar buyurtmachi e'tirozlarni bartaraf etib, hujjatlarni 5 oy-u 28 kundan keyin topshirgan bo'lsa, ekspertiza uchun qayta to'lov talab qilinadimi?",
+     "reuse": null
+    },
+    {
+     "n": 128,
+     "q": "Tender 3 ta mustaqil lotdan iborat bo'lsa, tender hujjatlari ekspertizasi uchun to'lov qaysi summadan hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 129,
+     "q": "Reglamentning 4-bosqichi (ekspertiza) boshlanishidan oldin Markaz xizmatlari to'langani faktini qaysi hujjat tasdiqlaydi?",
+     "reuse": null
+    },
+    {
+     "n": 130,
+     "q": "Buyurtmachi yo'qotilgan xulosa dublikatini olish uchun murojaat qildi. Tashkilot uchun xizmat qiymati qancha?",
+     "reuse": null
+    },
+    {
+     "n": 131,
+     "q": "Buyurtmachi avtotransport xaridi bo'yicha TTda: «Dvigatel hajmi 2.0L, XXX model markirovkasi, ekvivalentga yo'l qo'yilmaydi» talabini yozdi. Bunday TT ekspertizadan o'tadimi?",
+     "reuse": null
+    },
+    {
+     "n": 132,
+     "q": "Import kontrakti narx qismini tahlil qilishda Markaz tomonidan narxni aniqlashning qaysi uchta usuli qo'llaniladi?",
+     "reuse": null
+    },
+    {
+     "n": 133,
+     "q": "O'zbek va ingliz tillarida tuzilgan import kontraktida til versiyalarining ustuvorligi qanday rasmiylashtiriladi?",
+     "reuse": null
+    },
+    {
+     "n": 134,
+     "q": "Kontraktda narx «sirg'aluvchan» (sirg'aluvchan) deb ko'rsatilgan. Nizom bunday narxlarni rasmiylashtirishga qanday talab qo'yadi?",
+     "reuse": null
+    },
+    {
+     "n": 135,
+     "q": "Import kontrakti loyihasida TIF TN kodini ko'rsatish majburiymi?",
+     "reuse": null
+    },
+    {
+     "n": 136,
+     "q": "Kontragentni identifikatsiya qilish uchun Markaz etkazib beruvchi to'g'risida qanday majburiy texnik- iqtisodiy ma'lumotlarni so'rash huquqiga ega?",
+     "reuse": null
+    },
+    {
+     "n": 137,
+     "q": "Agar buyurtmachi уипак манзилини o'zgartirsa va 7 kun ichida qayta rasmiylashtirishga arizaga topshirmasa, Markaz xulosasining yuridik taqdiri nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 138,
+     "q": "Etkazib beruvchi 12 oy kafolat muddatini belgiladi. Shartnomalar bo'yicha Nizomga muvofiq kafolat muddati qaysi paytdan boshlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 139,
+     "q": "Shartnomalar bo'yicha yakuniy hujjatlarni berishning ikki bosqichli tartibi tender hujjatlari bo'yicha тартибдап nimasi bilan фарқ qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 140,
+     "q": "TT ekspertizasi natijalari bo'yicha Markaz xulosasi bilan birga buyurtmachiga narxlar to'g'risida qanday axborot topshiriladi?",
+     "reuse": null
+    },
+    {
+     "n": 141,
+     "q": "Markaz xulosasi qaysi organ tomonidan va qanday holatda bekor qilinishi (bekor qilingan) mumkin?",
+     "reuse": null
+    },
+    {
+     "n": 142,
+     "q": "Shartnoma bo'yicha hujjatlar topshirilgandan keyin 5 ish kuni ichida ma'lumotlar to'liq emasligi aniqlansa, Markaz nima qilishi shart?",
+     "reuse": null
+    },
+    {
+     "n": 143,
+     "q": "Uskunalar spetsifikatsiyasida stanoklar etkazib berish va xodimlarni o'qitish nazarda tutilgan bo'lsa, kontraktda narxlar qanday tuzilishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 144,
+     "q": "TTda boshlang'ich narxni o'rtacha bozor narxiga nisbatan asoslarsiz oshirib yuborganlik uchun buyurtmachining javobgarlik shakli qanday?",
+     "reuse": null
+    },
+    {
+     "n": 145,
+     "q": "Berilgan xulosalar reestri ochiq axborot platformasiga kiritiladimi va unda qanday ma'lumotlar qayd etiladi?",
+     "reuse": null
+    },
+    {
+     "n": 146,
+     "q": "E'tirozlar bartaraf etilgani haqida tasdiqnoma olingandan keyin Markaz shartnoma bo'yicha to me'yorlangan hujjatlarni qayta ko'rib chiqishni qancha muddatda amalga oshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 147,
+     "q": "Buyurtmachi TT bo'yicha ijobiy xulosa berishni rad etish haqidagi Markaz qaroriga rozi emas. Sudgacha e'tiroz bildirish tartibi qanday?",
+     "reuse": null
+    },
+    {
+     "n": 148,
+     "q": "Ekspertiza xizmatlarini ko'rsatish shartnomasini bajarishdan kelib chiqadigan Markaz va Buyurtmachi o'rtasidagi kelishmovchiliklarni hal etish tartibi qanday?",
+     "reuse": null
+    },
+    {
+     "n": 149,
+     "q": "Buyurtmachining mansabdor shaxslari Markaz e'tirozlarini (e'tirozlar) e'tiborsiz qoldirib, kontrakt tuzsa va bajarsa, uylarga qanday javobgarlik nazarda tutilgan?",
+     "reuse": null
+    },
+    {
+     "n": 150,
+     "q": "Amal qilishi to'xtatilgan xulosaning amal qilishini tiklash (tiklash) to'g'risida Markaz tomonidan qaror qabul qilish tartibi va muddati qanday?",
+     "reuse": null
+    },
+    {
+     "n": 151,
+     "q": "Qarorga muvofiq loyihaoldi, tender hujjatlari va shartnomalar loyihalarining kompleks ekspertizasini o'tkazishga qaysi organ vakolatli hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 152,
+     "q": "Kompleks ekspertiza yakunlari bo'yicha Markaz tomonidan xulosa qanday tartibda rasmiylashtiriladi va beriladi?",
+     "reuse": null
+    },
+    {
+     "n": 153,
+     "q": "Qaysi holatda normativ-huquqiy hujjatlarda muayyan etkazib beruvchilarning nomlarini va (yoki) tovarlarning (ishlarning, xizmatlarning) qiymatini ko'rsatish taqiqlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 154,
+     "q": "Xorijiy IT-uskunalar va dasturiy ta'minotni xarid qilish bo'yicha loyihalarni Markaz tomonidan ko'rib chiqish uchun qanday dastlabki shart bajarilishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 155,
+     "q": "Loyihalarning TEO (texnik-iqtisodiy asoslash) kompleks ekspertizasini o'tkazganlik uchun to'lov miqdori qanchani tashkil etadi?",
+     "reuse": null
+    },
+    {
+     "n": 156,
+     "q": "Loyihalarning TER (texnik-iqtisodiy hisob-kitoblari) kompleks ekspertizasini o'tkazganlik uchun qanday to'lov to'lanadi?",
+     "reuse": null
+    },
+    {
+     "n": 157,
+     "q": "Markaz tomonidan hujjatlar ekspertizasi to'lovning qanday shartlarida o'tkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 158,
+     "q": "PQ-332-sonli Qaror ijrosini nazorat qilish kimning zimmasiga yuklatilgan?",
+     "reuse": null
+    },
+    {
+     "n": 159,
+     "q": "«Loyihalar va xaridlar samaradorligini oshirish markazi» DUKning muassisi qaysi tashkilot hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 160,
+     "q": "Hujjatlarni qabul qilish va e'tirozlarni yuborishda Markaz buyurtmachilar bilan qaysi shaklda hamkorlik qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 161,
+     "q": "Bujet buyurtmachilarining qaysi hajmdagi xaridlari uchun tender hujjatlari Markazda majburiy ekspertizadan o'tkzilishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 162,
+     "q": "Korporativ buyurtmachilar xarid summasi qancha bo'lganda tender hujjatlarini Markazga ekspertizaga yuborishlari shart?",
+     "reuse": null
+    },
+    {
+     "n": 163,
+     "q": "Agar korporativ buyurtmachi Bujet tizimi bujetlari mablag'lari hisobidan xaridni amalga oshirsa, ushbu xarid doirasida u qanday maqomga ega bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 164,
+     "q": "Davlat tashqi qarzi hisobidan moliyalashtiriladigan loyihalar bo'yicha tender hujjatlarini majburiy ekspertizadan o'tkazish uchun qanday bo'sag'aviy ekvivalent belgilangan?",
+     "reuse": null
+    },
+    {
+     "n": 165,
+     "q": "Agar tendersiz xarid qilish huquqi Prezident yoki Vazirlar Mahkamasi hujjatlari bilan berilgan bo'lsa, lekin summa BHMning 25 000 baravaridan (bujet tashkilotlari uchun 6 000 dan) oshsa, xarid qaysi usulda o'tkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 166,
+     "q": "Tender hujjatlari va texnik topshiriqlarning kompleks ekspertizasi uchun to'lov stavkasi qancha?",
+     "reuse": null
+    },
+    {
+     "n": 167,
+     "q": "Bujet tizimi va Tiklanish va taraqqiyot jamg'armasi mablag'lari hisobidan amalga oshiriladigan xaridlarda tender hujjatlari ekspertizasi uchun to'lov miqdori qanday belgilangan?",
+     "reuse": null
+    },
+    {
+     "n": 168,
+     "q": "E'tirozlar bartaraf etilgandan so'ng tender hujjatlari yoki texnik topshiriq ekspertizaga qayta kiritilganda to'lov undiriladimi?",
+     "reuse": null
+    },
+    {
+     "n": 169,
+     "q": "Agar rad etilgan tender hujjatlari 6 oy o'tgach qayta topshirilsa nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 170,
+     "q": "Tovar pozitsiyalari soni 20 tagacha bo'lgan «kichik xarid» (6 000 – 25 000 BHM) uchun texnik topshiriqni ekspertizadan o'tkazishning maksimal muddati qancha?",
+     "reuse": null
+    },
+    {
+     "n": 171,
+     "q": "Pozitsiyalar soni 21 tadan ortiq bo'lgan «murakkab xarid» (BHMning 100 000 baravaridan ortiq) uchun texnik topshiriq ekspertizasi necha kalendar kun davomida o'tkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 172,
+     "q": "Texnik topshiriqda tovarlar/xizmatlar xususiyatlarini bayon etishga qo'yiladigan asosiy talablar qanday?",
+     "reuse": null
+    },
+    {
+     "n": 173,
+     "q": "Xarid qilinadigan tovarning texnik topshirig'ida muayyan tovar belgisi yoki patentni ko'rsatishga yo'l qo'yiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 174,
+     "q": "Buyurtmachi tomonidan aniqlangan kamchiliklar bartaraf etilgach, Markaz tomonidan tender hujjatlari texnik topshiriqni qayta ko'rib chiqish muddati qancha?",
+     "reuse": null
+    },
+    {
+     "n": 175,
+     "q": "Tender o'tkazish to'g'risidagi e'lon qaysi paytda maxsus axborot portaliga joylashtirilishi mumkin?",
+     "reuse": null
+    },
+    {
+     "n": 176,
+     "q": "«Davlat xaridlari to'g'risida»gi Qonunning 71-moddasiga muvofiq tuziladigan to'g'ridan-to'g'ri shartnomalar Markazda majburiy ekspertizadan o'tishi uchun qanday qiymat mezonlariga javob berishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 177,
+     "q": "Qaysi hollarda to'g'ridan-to'g'ri shartnomalar va import kontraktlari, ularning summasi belgilangan bo'sag'alardan oshsa ham, Markazda ekspertizadan o'tkazilmaydi?",
+     "reuse": null
+    },
+    {
+     "n": 178,
+     "q": "Tadbirkorlar va buyurtmachilar shartnomalarni Markazga ekspertiza uchun ihtiyoriy ravishda topshirish huquqiga egami?",
+     "reuse": null
+    },
+    {
+     "n": 179,
+     "q": "Agar shartnoma bo'yicha majburiyatlar taraflar tomonidan qisman yoki to'liq bajarilgan bo'lsa, shartnoma ekspertizadan o'tkaziladimi?",
+     "reuse": null
+    },
+    {
+     "n": 180,
+     "q": "Offshor hududlar bilan bog'liq import kontraktini ekspertizadan o'tkazish va ro'yxatdan o'tkazishni rad etishning so'zsiz sabablaridan birini ayting.",
+     "reuse": null
+    },
+    {
+     "n": 181,
+     "q": "Markaz umumiy tartibda shartnoma yoki import kontrakti loyihasining kompleks ekspertizasini qancha muddatda o'tkazadi?",
+     "reuse": null
+    },
+    {
+     "n": 182,
+     "q": "Etkazib beruvchilar va narxlar aniq belgilangan PQ/VMQ asosida tuziladigan shartnomalar ekspertizasi Markaz tomonidan necha ish kunida o'tkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 183,
+     "q": "Shartnoma loyihasi bo'yicha e'tirozlar bo'lmaganda birinchi bosqichda Markaz buyurtmachiga qanday hujjat beradi?",
+     "reuse": null
+    },
+    {
+     "n": 184,
+     "q": "E'tirozlar yo'qligi to'g'risida xat olingandan so'ng buyurtmachi necha oy muddatda imzolangan shartnoma aslini Markazga taqdim etishi shart?",
+     "reuse": null
+    },
+    {
+     "n": 185,
+     "q": "Agar imzolangan shartnoma e'tirozlar yo'qligi to'g'risida xat olingandan so'ng 1 oy ichida Markazga taqdim etilmasa nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 186,
+     "q": "Markaz taqdim etilgan asli shartnomani necha kun ichida ro'yxatdan o'tkazadi va shtamp qo'yilgan xulosani beradi?",
+     "reuse": null
+    },
+    {
+     "n": 187,
+     "q": "Ro'yxatdan o'tkazilgan shartnomaga/import kontraktiga Markaz tomonidan berilgan xulosa qaysi paytgacha amal qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 188,
+     "q": "Shartnoma bo'yicha Markazning yo'qotilgan xulosasi dublikatini berganlik uchun to'lov stavkasi qancha?",
+     "reuse": null
+    },
+    {
+     "n": 189,
+     "q": "Asli shikastlangan/yo'qotilganda Markaz xulosa dublikatini qancha muddatda beradi?",
+     "reuse": null
+    },
+    {
+     "n": 190,
+     "q": "Buyurtmachining nomi yoki pochta manzili o'zgarganda xulosani qayta rasmiylashtirish uchun to'lov undiriladimi?",
+     "reuse": null
+    },
+    {
+     "n": 191,
+     "q": "Ekspertizaga topshiriladigan import kontrakti loyihasi matni qaysi tilda tuzilishiga yo'l qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 192,
+     "q": "Import kontraktlari matnida tovarlarni etkazib berishning asosiy shartlari qanday aniqlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 193,
+     "q": "Agar ro'yxatdan o'tkazilgan shartnoma asli ilgari Markaz bilan kelishilgan loyihadan farq qilsa, buyurtmachining mansabdor shaxslariga qanday javobgarlik yuklatiladi?",
+     "reuse": null
+    },
+    {
+     "n": 194,
+     "q": "Agar buyurtmachi talabnomani qaytarib olishga yoki shartnomani bekor qilishga qaror qilsa, ekspertiza uchun to'langan mablag'lar nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 195,
+     "q": "Agar xarid mahalliy ishlab chiqaruvchilar o'rtasida o'tkazilsa (3 va undan ortiq ishtirokchi), texnik topshiriqning narx qismi ekspertizasi nimaga asoslanadi?",
+     "reuse": null
+    },
+    {
+     "n": 196,
+     "q": "Har xil vazifadagi tovarlar xarid qilinganda texnik topshiriq nechta nusxada/lotda rasmiylashtiriladi?",
+     "reuse": null
+    },
+    {
+     "n": 197,
+     "q": "Buyurtmachi Markaz mansabdor shaxslarining harakatlari (harakatsizligi) yoki xulosa berishni rad etish ustidan qayerga shikoyat qilish huquqiga ega?",
+     "reuse": null
+    },
+    {
+     "n": 198,
+     "q": "Rad etish sabablari bartaraf etilgach, Markaz shartnoma/kontrakt loyihasini qayta ko'rib chiqishni qancha muddatda amalga oshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 199,
+     "q": "Import kontrakti ekspertizasida Markaz etkazib beruvchining bereficiar mulshtori to'g'risida qanday majburiy ma'lumotlarni talab qilishi mumkin?",
+     "reuse": null
+    },
+    {
+     "n": 200,
+     "q": "Agar asosiy shartnomaning o'zi ilgari Markazda ekspertizadan o'tmagan bo'lsa, shartnomalarga qo'shimcha bitimlarni ekspertizadan o'tkazishga ruxsat beriladimi?",
+     "reuse": null
+    },
+    {
+     "n": 201,
+     "q": "Lotning boshlangʻich narxi — QQS siz 180 000 BHM, korporativ buyurtmachining oʻz mablag'lari hisobidan xarid. Ekspertiza to'lovini hisoblang.",
+     "reuse": null
+    },
+    {
+     "n": 202,
+     "q": "Lotning qaysi boshlang'ich narxida 200 BHM lik yuqori chegara hisob-kitobni “bog'lay” boshlaydi?",
+     "reuse": null
+    },
+    {
+     "n": 203,
+     "q": "Budjet buyurtmachisi davlat budjeti mablagʻlari hisobidan 400 000 BHM lik tender o'tkazmoqda. Toʻlov qancha?",
+     "reuse": null
+    },
+    {
+     "n": 204,
+     "q": "Tender to'rtta lotdan iborat: 30 000, 60 000, 90 000 va 250 000 BHM. To'ʻlov qanday hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 205,
+     "q": "Loyihaning umumiy qiymati — 5 mln AQSh dollari. TIA kompleks ekspertizasi uchun to'lov qancha bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 206,
+     "q": "Ayni shu loyiha TIA bilan emas, texnik-iqtisodiy hisob-kitob bilan kiritilgan. Qancha to'lanadi?",
+     "reuse": null
+    },
+    {
+     "n": 207,
+     "q": "Loyihaning qaysi summasida TIA uchun toʻlov yuqori chegaraga yetadi?",
+     "reuse": null
+    },
+    {
+     "n": 208,
+     "q": "Kontrakt narxini 45 000 BHM да oshiruvchi qo'shimcha kelishuv tuzilmoqda. To'lov qaysi bazadan hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 209,
+     "q": "Budjet buyurtmachisi 5 500 BHM lik tovar xarid qilmoqda. Ekspertiza majburiymi va u qancha turadi?",
+     "reuse": null
+    },
+    {
+     "n": 210,
+     "q": "60 000 BHM lik oʻrta xarid 21 pozitsiyani oʻz ichiga oladi. Tender hujjatlari ekspertizasining chegaraviy muddatini va u qaysi paytdan boshlanishini aniqlang.",
+     "reuse": null
+    },
+    {
+     "n": 211,
+     "q": "150 000 BHM lik murakkab xarid, 15 pozitsiya. Tender hujjatlari kiritilganda va texnik topshiriq kiritiganda muddat nimasi bilan farq qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 212,
+     "q": "Korporativ buyurtmachi 10 000 BHM lik uskuna xarid qilmoqda, shundan 3 000 BHM — budjet subsidiyasi, qolgani — oʻz mablagʻlari. Ekspertiza kerakmi?",
+     "reuse": null
+    },
+    {
+     "n": 213,
+     "q": "Prezident qarori bilan buyurtmachiga tendersiz uskuna xarid qilishga ruxsat berilgan. Summa — 40 000 BHM, buyurtmachi korporativ. U nima qilishi shart?",
+     "reuse": null
+    },
+    {
+     "n": 214,
+     "q": "Ayni shu holatda Prezident qarorida ishlab chiqilgan texnik topshiriq bevosita keltirilgan. Ekspertiza o'tkaziladimi?",
+     "reuse": null
+    },
+    {
+     "n": 215,
+     "q": "Loyiha Jahon banki qarzi bilan moliyalashtiriladi; xarid — 3 mln AQSh dollari. U 3-bandning “b” kichik bandi bo'yicha ekspertizaga tortiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 216,
+     "q": "Tashqi davlat qarzi tijorat banki orqali qayta moliyalashtiriladi, xarid — 2 mln AQSh dollari. “b” kichik bandi qo'llaniladimi?",
+     "reuse": null
+    },
+    {
+     "n": 217,
+     "q": "Buyurtmachi 80 000 BHM lik chet el ishlanmasi boʻlgan AT tizimini xarid qilmoqda. Ariza kelib tushganda Markazning harakatlar algoritmi qanday?",
+     "reuse": null
+    },
+    {
+     "n": 218,
+     "q": "Buyurtmachi 30 000 BHM lik binoni kapital ta'mirlamoqda va tender hujjatlarining toʻliq to`plamini tayyorlagan. Nima noto'g'ri?",
+     "reuse": null
+    },
+    {
+     "n": 219,
+     "q": "NHH loyihasida aniq yetkazib beruvchi nomi va uskuna qiymati koʻrsatilgan, masala Markaz bilan kelishilmagan. Bu qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 220,
+     "q": "Buyurtmachi 60 000 BHM lik bir turdagi uskuna xaridini haddan chiqib ketmaslik uchun har biri 15 000 BHM dan toʻrtta shartnomaga boʻlgan. Buni qanday baholash kerak?",
+     "reuse": null
+    },
+    {
+     "n": 221,
+     "q": "Korporativ buyurtmachi boʻlgan holda 30 000 BHM lik texnik topshiriqni ixtiyoriy ravishda ekspertizaga kiritmoqchi. Bu mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 222,
+     "q": "Buyurtmachi ishtirokchilarga qanday talablar belgilashga haqli va Markaz bu yerda nimani tekshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 223,
+     "q": "Tender mahalliy ishlab chiqaruvchilar oʻrtasida oʻtkazilishi rejalashtirilgan. Buyurtmachi nimani koʻrsatishi shart va narx ekspertizasi metodikasi qanday oʻzgaradi?",
+     "reuse": null
+    },
+    {
+     "n": 224,
+     "q": "Tender to'g'risidagi e'lon ekspertiza tugagunga qadar portalda e'lon qilinishi mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 225,
+     "q": "Buyurtmachi 10-yanvarda e'tirozlar bilan xulosa oldi. Qayta ishlangan hujjatlar 5-iyulda kiritildi. Huquqiy oqibatlar qanday?",
+     "reuse": null
+    },
+    {
+     "n": 226,
+     "q": "Ayni shu hujjatlar 5-mayda kiritilgan. Nima oʻzgaradi?",
+     "reuse": null
+    },
+    {
+     "n": 227,
+     "q": "Buyurtmachi ekspertizani to'ladi, keyin esa xariddan voz kechib, mablag'larni qaytarishni talab qildi. Talab qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 228,
+     "q": "Markaz hujjatlarning toʻliqligini sxemaning qaysi bosqichida va qanday muddatlarda tekshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 229,
+     "q": "Buyurtmachi toʻliq bo'lmagan to'plamni taqdim etdi. Bu mohiyatan rad etishmi yoki tartib-taomil holatimi?",
+     "reuse": null
+    },
+    {
+     "n": 230,
+     "q": "Buyurtmachi rad etishni asossiz deb hisoblaydi. Uning pozitsiyasini himoya qilish boʻyicha harakatlar ketma-ketligi qanday?",
+     "reuse": null
+    },
+    {
+     "n": 231,
+     "q": "Tender hujjatlari bo'yicha xulosa bilan birga buyurtmachiga qanday ma'lumotlar beriladi va bu qanday ahamiyatga ega?",
+     "reuse": null
+    },
+    {
+     "n": 232,
+     "q": "Buyurtmachi yetkazib beruvchilarning bog'lanish rekvizitlarisiz tijorat takliflarini taqdim etdi. Bu qanday kvalifikatsiya qilinadi?",
+     "reuse": null
+    },
+    {
+     "n": 233,
+     "q": "Boshlangʻich narx uchta tijorat taklifi bilan tasdiqlangan, ammo u ayni shunday tovarga o'rtacha bozor narxlaridan 25 foizga yuqori. Ijobiy xulosa uchun takliflarning o'zi yetarlimi?",
+     "reuse": null
+    },
+    {
+     "n": 234,
+     "q": "Sxema bo'yicha 4-bosqichning umumiy chegaraviy muddati — 25 kalendar kuni. U 21-band muddatlari bilan qanday nisbatda?",
+     "reuse": null
+    },
+    {
+     "n": 235,
+     "q": "Buyurtmachi shartnoma tuzdi, uni yarmigacha bajardi, soʻngra qo'shimcha kelishuv loyihasini ekspertizaga kiritdi. Markaz nima qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 236,
+     "q": "Asosiy shartnoma ekspertizasiz tuzilgan (summa haddan past edi). Keyinroq narxni haddan yuqoriga oshiruvchi qoʻshimcha kelishuv imzolanmoqda. U ekspertizaga tortiladimi?",
+     "reuse": null
+    },
+    {
+     "n": 237,
+     "q": "Buyurtmachi e'tirozlar yoʻqligi to'g'risidagi xatni 1-martda oldi, imzolangan asl nusxani esa 15-aprelda kiritdi. Oqibatlar qanday?",
+     "reuse": null
+    },
+    {
+     "n": 238,
+     "q": "Buyurtmachi Markaz e'tirozlarini hisobga olmasdan shartnomani imzoladi va ijroga kirishdi. Kim va nima uchun javobgar?",
+     "reuse": null
+    },
+    {
+     "n": 239,
+     "q": "Import kontrakti boʻyicha toʻlov offshor hududda roʻyxatdan oʻtgan norezidentga yo'naltirilmoqda. Arizaning taqdiri qanday?",
+     "reuse": null
+    },
+    {
+     "n": 240,
+     "q": "Markaz yetkazib beruvchini identifikatsiya qilish uchun qanday ma'lumotlarni so'rashga haqli va nima uchun?",
+     "reuse": null
+    },
+    {
+     "n": 241,
+     "q": "Import kontrakti loyihasi ingliz va xitoy tillarida tuzilgan. Nima talab qilinadi?",
+     "reuse": null
+    },
+    {
+     "n": 242,
+     "q": "Tomonlar “siljuvchi” narx belgilashdi. Bu 17-band tasnifi bilan qanday nisbatda va nimaga e'tibor berish kerak?",
+     "reuse": null
+    },
+    {
+     "n": 243,
+     "q": "Uskunani xarid qilishda montaj, ishga tushirish-sozlash, xodimlarni oʻqitish va royalti nazarda tutilgan. Bu qanday aks ettirilishi kerak?",
+     "reuse": null
+    },
+    {
+     "n": 244,
+     "q": "Tovar sifatini belgilashning qanday usullari asosiy deb tan olinadi va mashinalar hamda uskunalar boʻyicha qoʻshimcha ravishda nima talab qilinadi?",
+     "reuse": null
+    },
+    {
+     "n": 245,
+     "q": "Shartnoma bo'yicha xulosa berilgan, ammo buyurtmachi bir yil ichida ruxsat etish talablarini ikki marta buzdi. Nima yuz berishi mumkin va holatni qanday tiklash mumkin?",
+     "reuse": null
+    },
+    {
+     "n": 246,
+     "q": "Majburiy ekspertiza hadlarini 21-banddagi muddatlar to'ri bilan taqqoslang. Ular o'rtasida uzilish bormi va u qanday izohlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 247,
+     "q": "Bitta e'tirozlar davrasi bilan eng yomon stsenariyda tender hujjatlarining topshirilishidan e'lon joylashtirilgunicha boʻlgan toʻliq vaqt modelini tuzing.",
+     "reuse": null
+    },
+    {
+     "n": 248,
+     "q": "Tender hujjatlari ekspertizasini rad etish va shartnoma ekspertizasini rad etish oqibatlari nimasi bilan farq qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 249,
+     "q": "Nizomlarning qaysi normalari PQ-332 ning korrupsiyaga qarshi konturini hosil qiladi? Kamida beshtasini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 250,
+     "q": "Markaz xulosasi, shartnomani roʻyxatdan oʻtkazish va uni bajarish o'zaro qanday nisbatda? Shartnoma ro'yxatdan oʻtkazilgunga qadar bajarilgan boʻlsa, qaysi ketma-ketlik buzilgan?",
+     "reuse": null
+    },
+    {
+     "n": 251,
+     "q": "PQ-332 qarori bilan qanday hujjatlar tasdiqlangan va ular nechta?",
+     "reuse": null
+    },
+    {
+     "n": 252,
+     "q": "Kompleks ekspertizani qaysi organ amalga oshiradi va uning muassisi kim?",
+     "reuse": null
+    },
+    {
+     "n": 253,
+     "q": "Qarorning 2-bandi bilan Markaz zimmasiga qanday ikki guruh funksiya yuklatilgan?",
+     "reuse": null
+    },
+    {
+     "n": 254,
+     "q": "Agar narx yoki yetkazib beruvchi masalalari Markaz bilan kelishilmagan bo'lsa, normativ-huquqiy hujjatlarda nima qilish taqiqlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 255,
+     "q": "Chet elda ishlab chiqarilgan axborot uskunalari va dasturiy ta'minotni xarid qilish loyihalari uchun qanday qo'shimcha shart belgilangan?",
+     "reuse": {
+      "block": "it-1",
+      "n": 8
+     }
+    },
+    {
+     "n": 256,
+     "q": "Tender hujjatlari va texnik topshiriqlarni kompleks ekspertiza qilish uchun toʻlov qanday hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 257,
+     "q": "Budjet va Tiklanish va taraqqiyot jamg'armasi mablagʻlari hisobidan xaridlar uchun qanday imtiyoz nazarda tutilgan?",
+     "reuse": null
+    },
+    {
+     "n": 258,
+     "q": "Loyihalarning TIA va TIH kompleks ekspertizasi uchun toʻlov miqdori qanday?",
+     "reuse": null
+    },
+    {
+     "n": 259,
+     "q": "Ekspertiza qanday toʻlov shartlarida o'tkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 260,
+     "q": "Qarorning ijrosini nazorat qilish kimga yuklatilgan?",
+     "reuse": null
+    },
+    {
+     "n": 261,
+     "q": "Nizomga muvofiq texnik topshiriqqa ta'rif bering.",
+     "reuse": null
+    },
+    {
+     "n": 262,
+     "q": "Budjet buyurtmachilari kimlar, korporativ buyurtmachilar kimlar?",
+     "reuse": null
+    },
+    {
+     "n": 263,
+     "q": "Tender hujjatlarining majburiy ekspertizasi uchun qanday qiymat hadlari belgilangan?",
+     "reuse": {
+      "block": "it-1",
+      "n": 9
+     }
+    },
+    {
+     "n": 264,
+     "q": "Budjet mablag'lari hisobidan xarid amalga oshirayotgan korporativ buyurtmachi qanday ko'rib chiqiladi?",
+     "reuse": null
+    },
+    {
+     "n": 265,
+     "q": "Tashqi davlat qarzi hisobidagi loyihalar boʻyicha qanday tender hujjatlari ekspertizaga tortiladi?",
+     "reuse": null
+    },
+    {
+     "n": 266,
+     "q": "Prezident yoki Vazirlar Mahkamasi qarorlari bilan buyurtmachiga tendersiz xarid qilish huquqi berilsa, nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 267,
+     "q": "Buyurtmachi qanday diapazonda texnik topshiriqni ixtiyoriy ravishda ekspertizaga topshirishi mumkin va bu qanday toʻlanadi?",
+     "reuse": null
+    },
+    {
+     "n": 268,
+     "q": "Binolar, inshootlar va muhandislik kommunikatsiyalarini kapital qurish va ta'mirlash boʻyicha xarid hujjatlari qanday shaklda kiritiladi?",
+     "reuse": null
+    },
+    {
+     "n": 269,
+     "q": "Tender hujjatlari yoki texnik topshiriq ekspertizasi qanday asosiy yoʻnalishlar boʻyicha oʻtkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 270,
+     "q": "Markaz arizachidan qoʻshimcha ma'lumotlar soʻrashi mumkinmi?",
+     "reuse": {
+      "block": "it-1",
+      "n": 10
+     }
+    },
+    {
+     "n": 271,
+     "q": "Tender hujjatlari ekspertizasi uchun qanday hujjatlar taqdim etiladi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 11
+     }
+    },
+    {
+     "n": 272,
+     "q": "Texnik topshiriq ekspertizasi uchun hujjatlar roʻyxati tender hujjatlari ro'yxatidan nimasi bilan farq qiladi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 12
+     }
+    },
+    {
+     "n": 273,
+     "q": "Narx asosi sifatida taqdim etiladigan tijorat takliflariga qanday talablar qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 274,
+     "q": "Bir nechta xarid yoki lot boʻlganda hujjatlarni topshirish tartibi qanday?",
+     "reuse": {
+      "block": "it-2",
+      "n": 13
+     }
+    },
+    {
+     "n": 275,
+     "q": "Ekspertizaga taqdim etilgan hujjatlarning toʻliqligi va ishonchliligi uchun kim javobgar?",
+     "reuse": {
+      "block": "it-2",
+      "n": 14
+     }
+    },
+    {
+     "n": 276,
+     "q": "Hujjatlar Markazga qanday shaklda topshiriladi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 15
+     }
+    },
+    {
+     "n": 277,
+     "q": "Tender hujjatlari qaysi toʻrt qismdan iborat?",
+     "reuse": {
+      "block": "it-2",
+      "n": 16
+     }
+    },
+    {
+     "n": 278,
+     "q": "Tender ishtirokchisi uchun ус Папотада aks ettiriladigan kamida oltita pozitsiyani sanang.",
+     "reuse": null
+    },
+    {
+     "n": 279,
+     "q": "Tovarlarni xarid qilishda texnik qismda qanday ma'lumotlar aks ettiriladi?",
+     "reuse": null
+    },
+    {
+     "n": 280,
+     "q": "Tovarlarga (ishlarga, xizmatlarga) qo'yiladigan talablarni shakllantirishga qanday talablar belgilangan?",
+     "reuse": null
+    },
+    {
+     "n": 281,
+     "q": "Tovar belgisi, patent, model yoki aniq ishlab chiqaruvchini koʻrsatishga qachon yo'l qo'yiladi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 17
+     }
+    },
+    {
+     "n": 282,
+     "q": "Tender hujjatlarining narx qismida nima aks ettiriladi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 18
+     }
+    },
+    {
+     "n": 283,
+     "q": "Narx qismi ekspertizasida Markaz qanday manbalardan foydalanadi?",
+     "reuse": {
+      "block": "it-2",
+      "n": 19
+     }
+    },
+    {
+     "n": 284,
+     "q": "Buyurtmachi shartnomaviy majburiyatlarni buzganda, rad etganda yoki bekor qilganda ekspertiza uchun toʻlov qaytariladimi?",
+     "reuse": null
+    },
+    {
+     "n": 285,
+     "q": "Qaysi holda takroriy ekspertiza toʻlovsiz oʻtkaziladi?",
+     "reuse": null
+    },
+    {
+     "n": 286,
+     "q": "E'tirozlar bilan xulosa berilgan sanadan olti oy oʻtgandan keyin kiritilgan hujjatlar bilan nima boʻladi?",
+     "reuse": null
+    },
+    {
+     "n": 287,
+     "q": "Kapital qurilish va ta'mirlash bo'yicha texnik topshiriq ekspertizasi qachon to'lanadi?",
+     "reuse": null
+    },
+    {
+     "n": 288,
+     "q": "Tender hujjatlari ekspertizasining muddatlarini xarid toifalari bo'yicha sanang.",
+     "reuse": {
+      "block": "it-2",
+      "n": 20
+     }
+    },
+    {
+     "n": 289,
+     "q": "Texnik topshiriq ekspertizasining muddatlari tender hujjatlari muddatlaridan nimasi bilan farq qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 290,
+     "q": "Ekspertiza muddati qaysi paytdan hisoblanadi?",
+     "reuse": null
+    },
+    {
+     "n": 291,
+     "q": "Tender hujjatlari ekspertizasi yakunlari bo'yicha xulosaga nima ilova qilinadi va ijobiy xulosa qayerga yuboriladi?",
+     "reuse": null
+    },
+    {
+     "n": 292,
+     "q": "Ijobiy xulosa berishni rad etish uchun nima asos boʻladi?",
+     "reuse": null
+    },
+    {
+     "n": 293,
+     "q": "E'tirozlar bartaraf etilganidan keyin Markaz qayta ishlangan hujjatlarni qanday muddatda takroran koʻrib chiqadi?",
+     "reuse": null
+    },
+    {
+     "n": 294,
+     "q": "Import kontrakti va benefitsiar mulkdorga ta'rif bering.",
+     "reuse": null
+    },
+    {
+     "n": 295,
+     "q": "Qanday shartnoma loyihalari Markazda majburiy kompleks ekspertizaga tortiladi?",
+     "reuse": null
+    },
+    {
+     "n": 296,
+     "q": "Qanday shartnomalar va qoʻshimcha kelishuvlar ekspertizaga tortilmaydi?",
+     "reuse": null
+    },
+    {
+     "n": 297,
+     "q": "Shartnoma ekspertizasi va undan keyingi ro'yxatdan oʻtkazish muddatlari qanday?",
+     "reuse": null
+    },
+    {
+     "n": 298,
+     "q": "Buyurtmachi imzolangan shartnomani bir oylik muddatda kiritmasa, qanday oqibatlar yuzaga keladi?",
+     "reuse": null
+    },
+    {
+     "n": 299,
+     "q": "Shartnoma loyihasining ekspertizasi va roʻyxatdan o'tkazilishini rad etish asoslarini sanang.",
+     "reuse": null
+    },
+    {
+     "n": 300,
+     "q": "Xulosaning amal qilishi qaysi hollarda toʻxtatib turiladi, tugatiladi va bekor qilinadi?",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "key": "sanoat-b",
+   "nom": "ВМ-276 nizomi bo'yicha savollar",
+   "savollar": [
+    {
+     "n": 1,
+     "q": "Avans toʻlovi, vositachilik yig'imi va zakalatga ta'rif bering. Ular o'zaro qanday nisbatda?",
+     "reuse": null
+    },
+    {
+     "n": 2,
+     "q": "HKKP nima va u qanday funksiyalarni bajaradi?",
+     "reuse": null
+    },
+    {
+     "n": 3,
+     "q": "Lot, shaxsiy kabinet va qadam o'lchoviga ta'rif bering.",
+     "reuse": null
+    },
+    {
+     "n": 4,
+     "q": "Ushbu Nizom bo'yicha vakolatli organ kim va bu norma qanday o'zgargan?",
+     "reuse": null
+    },
+    {
+     "n": 5,
+     "q": "Davlat buyurtmachisining davlat xaridlariga tayyorgarligi nimalarni oʻz ichiga oladi?",
+     "reuse": null
+    },
+    {
+     "n": 6,
+     "q": "Reja-jadval qanday ma'lumotlarni oʻz ichiga olishi kerak va unga qanday muddatda o'zgartirish kiritishga yo'l qo'yiladi?",
+     "reuse": null
+    },
+    {
+     "n": 7,
+     "q": "Budjet va korporativ buyurtmachi uchun elektron davlat xaridlariga kirish shartlari nimasi bilan farq qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 8,
+     "q": "Turli tartib-taomillarda zakalat miqdorlari va uni band qilish muddatlari qanday?",
+     "reuse": null
+    },
+    {
+     "n": 9,
+     "q": "Shartnoma tuzishni rad etgan tanlash yoki tender g'olibining zakalati bilan nima boʻladi?",
+     "reuse": null
+    },
+    {
+     "n": 10,
+     "q": "Elektron doʻkon yoki auksion orqali tuzilgan shartnoma bo'yicha tovar yetkazib berilgandan keyingi hisob- kitoblar ketma-ketligini tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 11,
+     "q": "Korporativ buyurtmachi shartnomani muddatida to'lamasa va yetkazib berish tasdiqlanmasa, qanday oqibatlar yuzaga keladi?",
+     "reuse": null
+    },
+    {
+     "n": 12,
+     "q": "Ijrochi HKKP xabarnomasini olishdan oldin tovarni yetkazib bersa, xatarni kim ko'taradi?",
+     "reuse": null
+    },
+    {
+     "n": 13,
+     "q": "Davlat xaridlarining elektron tizimi avtomatik rejimda qanday harakatlarni amalga oshiradi?",
+     "reuse": null
+    },
+    {
+     "n": 14,
+     "q": "Mahalliy ishlab chiqaruvchilarga preferensiyalar tizimi qanday tashkil etilgan?",
+     "reuse": null
+    },
+    {
+     "n": 15,
+     "q": "377-рапа mahalliy ishlab chiqaruvchilar imkoniyatlarini oʻrganish toʻgʻrisida nimani belgilaydi?",
+     "reuse": null
+    },
+    {
+     "n": 16,
+     "q": "Elektron muhitda xarid komissiyasining ishi qanday tartibga solingan va rais affillangan boʻlsa nima boʻladi?",
+     "reuse": null
+    },
+    {
+     "n": 17,
+     "q": "Xarid komissiyasi mas'ul kotibining vazifalari qanday?",
+     "reuse": null
+    },
+    {
+     "n": 18,
+     "q": "Tanlash va tenderda e'lon joylashtirish muddatlari va baholash tartibini taqqoslang.",
+     "reuse": null
+    },
+    {
+     "n": 19,
+     "q": "Gʻolib qanday aniqlanadi va natijalar teng boʻlganda masala qanday hal etiladi?",
+     "reuse": null
+    },
+    {
+     "n": 20,
+     "q": "Tanlash natijalarini rasmiylashtirish tartibini va e'tirozlar kelib tushishi oqibatlarini tavsiflang.",
+     "reuse": null
+    },
+    {
+     "n": 21,
+     "q": "Korporativ buyurtmachi auksion toʻgʻrisida e'lon joylashtirdi, ammo uning HKKPdagi hisobvarag'ida faqat vositachilik yig'imiga mablagʻ bor. Nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 22,
+     "q": "Auksion ishtirokchisi zakalat kiritib, narx taklif qildi. Bir soatdan keyin boshqa ishtirokchi pastroq narx taklif etdi. Birinchi ishtirokchining zakalati qachon banddan yechiladi?",
+     "reuse": null
+    },
+    {
+     "n": 23,
+     "q": "Xarid komissiyasi tenderda zakalatni qiymatning 7 foizi miqdorida belgiladi. Bu qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 24,
+     "q": "Elektron doʻkon orqali shartnoma 1-martda ro'yxatga olindi. Korporativ buyurtmachi mablagʻlarni HKKPdagi hisobvaraqqa 20-martda oʻtkazdi. Baholang.",
+     "reuse": null
+    },
+    {
+     "n": 25,
+     "q": "Budjet buyurtmachisi tenderda g'olib boʻldi va to'lovni HKKPdagi hisobvarag'i orqali o'tkazmoqchi. Bu mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 26,
+     "q": "Ijrochi tovarni yetkazib berdi, buyurtmachi uni qabul qildi, ammo axborotni tizimga kiritmadi. Bir hafta o'tdi. Vaziyatni tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 27,
+     "q": "Buyurtmachi qabul qilishni tasdiqlashni kechiktirmoqda, ijrochi esa “shunchaki buyurtmachining hisobvarag'idan toʻg'ʻridan-toʻgʻri to'lovni olish”ni taklif qilmoqda. Nima noto'g'ri?",
+     "reuse": null
+    },
+    {
+     "n": 28,
+     "q": "Nizo Shikoyatlarni koʻrib chiqish boʻyicha komissiyaga yetib bordi, u ijrochi foydasiga qaror chiqardi. HKKP nima qiladi?",
+     "reuse": null
+    },
+    {
+     "n": 29,
+     "q": "Buyurtmachi xarid tartib-taomili boshlanishidan ikki kun oldin reja-jadvalga o'zgartirish kiritmoqchi. Bu qonuniymi?",
+     "reuse": null
+    },
+    {
+     "n": 30,
+     "q": "Xarid komissiyasi a'zosi shaxsiy kabinetga birinchi marta kirganda affillangan aloqalar to'g'risidagi ma'lumotlarni buni rasmiyatchilik deb hisoblab toʻldirmadi. Baholang.",
+     "reuse": null
+    },
+    {
+     "n": 31,
+     "q": "Tender komissiyasi raisi ishtirokchilardan biri bilan affillangani aniqlandi. Tartib-taomil bilan nima bo'ladi?",
+     "reuse": null
+    },
+    {
+     "n": 32,
+     "q": "Tenderda komissiya a'zosi belgilangan muddatda shaxsiy kabinet orqali ovoz bermadi. Uning pozitsiyasi qanday hisobga olinadi? Agar bu tanlash boʻlganda-chi?",
+     "reuse": null
+    },
+    {
+     "n": 33,
+     "q": "Ishtirokchi xarid hujjatlarini tushuntirish soʻrovini yubordi. Buyurtmachi toʻrt ish kunidan keyin javob berdi va texnik xususiyatlarga qo'yilgan talabni toʻldirdi. Qoidabuzarliklarni tahlil qiling.",
+     "reuse": null
+    },
+    {
+     "n": 34,
+     "q": "Ishtirokchi biriktirgan fayllardagi ma'lumotlar taklifning oʻzidagi ma'lumotlardan farq qilmoqda. Buni kim va qaysi bosqichda aniqlaydi?",
+     "reuse": null
+    },
+    {
+     "n": 35,
+     "q": "Buyurtmachi tenderda ishtirokchining moliyaviy barqarorligini xarid hujjatlarida koʻrsatilmagan hujjatlar bo'yicha baholamoqchi. Bu mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 36,
+     "q": "Ball usuli boʻyicha baholash yakunida ikki ishtirokchi bir xil miqdorda ball toʻpladi. G'olibni qanday aniqlash kerak? Agar eng past narx usuli qo'ʻllanilganda-chi?",
+     "reuse": null
+    },
+    {
+     "n": 37,
+     "q": "Mahalliylashtirish darajasi 60 foiz boʻlgan mahalliy ishlab chiqaruvchi 80 ball to'pladi va taklif etilganlarning eng pastidan 20 foizga yuqori narx taklif qildi. U qoʻshimcha ball oladimi?",
+     "reuse": null
+    },
+    {
+     "n": 38,
+     "q": "Tanlashning dastlabki bayonnomasi 10-sanada joylashtirildi. Ishtirokchi e'tirozlarni 14-sanada yubordi. Komissiya ularni koʻrib chiqishi shartmi?",
+     "reuse": null
+    },
+    {
+     "n": 39,
+     "q": "Budjet buyurtmachisi yetkazib berish uzluksizligi uchun uch yilga hadli kelishuv tuzmoqchi. Bu mumkinmi?",
+     "reuse": null
+    },
+    {
+     "n": 40,
+     "q": "Hadli kelishuv tartib-taomiliga ikki ishtirokchi taklif berdi. Ikkalasi ham talablarga javob beradi. Buyurtmachi nima qilishi kerak va ishtirokchilar yetarli bo'lganda ikkinchi bosqich qanday tashkil etilgan?",
+     "reuse": null
+    }
+   ]
+  }
+ ]
+}
